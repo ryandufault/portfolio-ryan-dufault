@@ -1,0 +1,74 @@
+:root {
+  --primary: #3e17ff;
+  --second: #321f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: Archivo;
+  background-color: var(--second);
+}
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+header {
+  position: sticky;
+  top: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.svg-container {
+  width: 100%;
+  display: flex;
+  padding-top: 24px;
+}
+
+.responsive-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-svg:nth-child(2) {
+  transform: translateY(-20vh);
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 84px;
+  color: var(--primary);
+  top: 0px;
+  font-size: clamp(14px, 0.833vw, 58px);
+}
+
+.header-spacing {
+  padding-bottom: 560px;
+}
+
+.a-header {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*         SECTION PROJET       SECTION PROJET        SECTION PROJET        SECTION PROJET  */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+.newelement {
+  width: 100%;
+  height: 3080px;
+  background-color: rgb(74, 64, 64);
+}
