@@ -18,14 +18,11 @@ tl.to([".responsive-svg:nth-child(1)", ".header-links"], {
   duration: 3,
   ease: "none",
 })
-  .set(".responsive-svg:nth-child(1)", {
-    display: "none", // fait disparaitre le 1er svg
+  .set(".header-svg", {
+    display: "block", // fait apparaitre le 2ème svg
+    opacity: 1,
   })
-  .set(".responsive-svg:nth-child(2)", {
-    display: "block",
-    opacity: 1, // fait apparaitre le 2ème svg
-  })
-  .to(".responsive-svg:nth-child(2)", {
+  .to(".header-svg", {
     clipPath: "inset(0% 0% 0% 0%)", // fait apparaitre le 2ème svg par le bas avec un mask
     ease: "none",
   })
