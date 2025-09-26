@@ -1,6 +1,6 @@
 :root {
   --primary: #3e17ff;
-  --second: #321f1f;
+  --second: #ffffff;
 }
 
 * {
@@ -38,7 +38,9 @@ header {
 }
 
 .responsive-svg:nth-child(2) {
-  transform: translateY(-20vh);
+  /*transform: translateY(-20vh);*/ /* <- ancienne animation */
+  clip-path: inset(20% 0% 0% 0%); /* <- par le haut */
+  /*clip-path: inset(0% 0% 50% 50%); */ /* <- par la droite */
 }
 
 .header-links {
@@ -66,9 +68,3 @@ header {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*         SECTION PROJET       SECTION PROJET        SECTION PROJET        SECTION PROJET  */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-
-.newelement {
-  width: 100%;
-  height: 3080px;
-  background-color: rgb(74, 64, 64);
-}
