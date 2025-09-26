@@ -68,3 +68,16 @@ header {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*         SECTION PROJET       SECTION PROJET        SECTION PROJET        SECTION PROJET  */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+.projets-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    12,
+    1fr
+  ); /* <- 12 colonnes de taille répartie également */
+  gap: 24px;
+  padding-right: 24px; /* marges */
+  padding-left: 24px; /* marges */
+  height: 123.15vh; /* environ 1330px quand écran hauteur = 1080px */
+  background-color: red;
+}
