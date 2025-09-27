@@ -15,6 +15,7 @@ let tl = gsap.timeline({
 
 tl.to([".responsive-svg", ".header-links"], {
   y: "-100vh",
+  opacity: 0,
   duration: 3,
   ease: "none",
 })
