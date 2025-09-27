@@ -20,13 +20,14 @@ body {
 /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
-header {
+.header {
   position: sticky;
   top: 0;
   padding-top: clamp(12px, 2.22vw, 36px); /* ≈24px sur un viewport de 1080px */
   height: 130px;
-  z-index: 10;
+  z-index: 100;
   padding-left: clamp(12px, 2.22vw, 36px); /* ≈24px sur un viewport de 1080px */
+  background-color: red;
 }
 
 .svg-wrapper {
@@ -38,6 +39,7 @@ header {
     36px
   ); /* ≈24px sur un viewport de 1080px */
   height: 100%;
+  z-index: 10;
 }
 
 .svg-container {
@@ -47,7 +49,7 @@ header {
   padding-top: clamp(12px, 2.22vw, 36px); /* ≈24px sur un viewport de 1080px */
 }
 
-.responsive-svg:nth-child(1) {
+.responsive-svg {
   width: 100%;
   height: 100%;
 }
@@ -84,7 +86,7 @@ header {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 .header-spacing {
-  padding-bottom: 560px;
+  padding-bottom: clamp(200px, 25.17vw, 600px);
 }
 
 .projets-wrapper {
@@ -110,14 +112,14 @@ header {
     123vh,
     1119px
   ); /* environ 1330px quand écran hauteur = 1080px */
-  background-color: red;
+  /*background-color: red;*/ /* débug */
 }
 
 .projets-filters-container {
   grid-column-start: 3;
   grid-column-end: 11;
   grid-row: 1;
-  background-color: rgb(91, 183, 153);
+  /*background-color: rgb(91, 183, 153);*/ /* débug */
   display: flex;
   flex-direction: column; /* Aligne les éléments (h1 et filtres) en colonne */
   justify-content: space-between; /* Espacement égal entre le h1 et les filtres */
@@ -182,18 +184,18 @@ h1 {
   grid-column-start: 3;
   grid-column-end: 11;
   grid-row: 2; /* prend le reste de l'espace */
-  background-color: rgb(119, 149, 161);
+  /*background-color: rgb(119, 149, 161);*/ /* débug */
 }
 
 .projets-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
   gap: clamp(20px, 4.17vw, 720px) 0px; /* équivalent au espacement .spacer entre filtres et projets*/
 }
 
 .projet {
-  grid-column: 1 / -1; /* le projet prend toute les colonens de la grid*/
+  grid-column-start: 1;
+  grid-column-end: -1; /* le projet prend toute les colonens de la grid*/
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(4, 1fr); /* 4 rows pour les txt */
@@ -210,7 +212,8 @@ h1 {
 .projet-thumbnail {
   border: 0.12vw solid var(--primary);
   width: 100%;
-  height: 500px;
+  /*height: 500px;*/ /* alternative si aspect ratio est capricieux */
+  aspect-ratio: 16 /9;
   object-fit: cover;
 }
 
@@ -242,10 +245,22 @@ h1 {
 }
 
 .projet-button {
-  grid-column: 7 / 9;
+  grid-column: 8 / 9;
   grid-row: 4;
   margin: 0;
   align-self: end;
   color: var(--primary);
   font-size: clamp(14px, 0.833vw, 58px); /*16px sur 1920x1080*/
+  width: 8.33vw; /* ~160px sur 1920px */
+  aspect-ratio: 160 / 42; /* garde le ratio largeur/hauteur */
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.12vw solid var(--primary);
+  border-radius: 0.3125vw; /* ≈6px sur un écran de 1920px de large */
+  transition: all 0.3s ease;
+}
+
+.projet-button:hover {
+  background-color: var(--primary);
+  color: var(--second);
+  transition: all 0.3s ease;
 }

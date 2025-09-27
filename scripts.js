@@ -13,7 +13,7 @@ let tl = gsap.timeline({
   },
 });
 
-tl.to([".responsive-svg:nth-child(1)", ".header-links"], {
+tl.to([".responsive-svg", ".header-links"], {
   y: "-100vh",
   duration: 3,
   ease: "none",
@@ -25,6 +25,7 @@ tl.to([".responsive-svg:nth-child(1)", ".header-links"], {
   .to(".header-svg", {
     clipPath: "inset(0% 0% 0% 0%)", // fait apparaitre le 2ème svg par le bas avec un mask
     ease: "none",
+    pin: true,
   })
   .to(".header-links", {
     display: "none", // fait disapraitre les liens
