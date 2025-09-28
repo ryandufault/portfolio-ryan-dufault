@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /* ANIM HEADER     ANIM HEADER     ANIM HEADER        */
@@ -26,7 +27,6 @@ tl.to([".responsive-svg", ".header-links"], {
   .to(".header-svg", {
     clipPath: "inset(0% 0% 0% 0%)", // fait apparaitre le 2ème svg par le bas avec un mask
     ease: "none",
-    pin: true,
   })
   .to(".header-links", {
     display: "none", // fait disapraitre les liens
@@ -35,3 +35,44 @@ tl.to([".responsive-svg", ".header-links"], {
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* ANIM HEADER     ANIM HEADER     ANIM HEADER        */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+// Header svg
+document.querySelector(".header-svg").addEventListener("click", scrollTop);
+
+function scrollTop() {
+  gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: "power2.inOut" });
+}
+
+/////////////////////////////////////////////////////////////////
+
+// Projets <a>
+let projetsSection = document.getElementById("projets");
+
+function scrollProjets() {
+  gsap.to(window, {
+    scrollTo: { y: projetsSection.offsetTop - 70 },
+    duration: 1,
+    ease: "power2.inOut",
+  });
+}
+
+document
+  .querySelector(".a-header:nth-child(1)")
+  .addEventListener("click", scrollProjets);
+
+/////////////////////////////////////////////////////////////////
+
+// Apropos <a>
+let aproposSection = document.getElementById("apropos");
+
+function scrollApropos() {
+  gsap.to(window, {
+    scrollTo: { y: aproposSection.offsetTop - 70 },
+    duration: 1,
+    ease: "power2.inOut",
+  });
+}
+
+document
+  .querySelector(".a-header:nth-child(2)")
+  .addEventListener("click", scrollApropos);
