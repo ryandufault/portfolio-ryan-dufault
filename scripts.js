@@ -35,12 +35,15 @@ tl.to([".responsive-svg", ".header-links"], {
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* ANIM HEADER     ANIM HEADER     ANIM HEADER        */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* SCROLLTO     SCROLLTO     SCROLLTO     SCROLLTO    */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 // Header svg
-document.querySelector(".header-svg").addEventListener("click", scrollTop);
+document.querySelector(".header-svg").addEventListener("click", scrollTop); 
 
 function scrollTop() {
-  gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: "power2.inOut" });
+  gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: "power2.inOut" }); // quand on clique sur le header ça scroll au top
 }
 
 /////////////////////////////////////////////////////////////////
@@ -50,14 +53,14 @@ let projetsSection = document.getElementById("projets");
 
 function scrollProjets() {
   gsap.to(window, {
-    scrollTo: { y: projetsSection.offsetTop - 70 },
+    scrollTo: { y: projetsSection.offsetTop - 70 }, // scroll à la section Projets
     duration: 1,
     ease: "power2.inOut",
   });
 }
 
 document
-  .querySelector(".a-header:nth-child(1)")
+  .querySelector(".a-header:nth-child(1)") // scroll à la section Projets au click du <a>
   .addEventListener("click", scrollProjets);
 
 /////////////////////////////////////////////////////////////////
@@ -67,7 +70,7 @@ let aproposSection = document.getElementById("apropos");
 
 function scrollApropos() {
   gsap.to(window, {
-    scrollTo: { y: aproposSection.offsetTop - 70 },
+    scrollTo: { y: aproposSection.offsetTop - 70 }, // scroll à la section À propos
     duration: 1,
     ease: "power2.inOut",
   });
@@ -75,11 +78,31 @@ function scrollApropos() {
 
 document
   .querySelector(".a-header:nth-child(2)")
-  .addEventListener("click", scrollApropos);
+  .addEventListener("click", scrollApropos); // scroll à la section À propos au click du <a>
 
-gsap.to(".logiciels-track", {
-  x: "-100%",
-  duration: 10,
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* SCROLLTO     SCROLLTO     SCROLLTO     SCROLLTO    */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* ANIM LOGICIELS    ANIM LOGICIELS    ANIM LOGICIELS */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+let animLogiciels = gsap.to(".logiciels-row", { // animations sur la bande de logiciels
+  x: "-11%",
+  duration: 2,
   repeat: -1,
+  yoyo: true,
   ease: "none",
 });
+
+document.querySelector(".logiciels-row").addEventListener("mouseover", function(event) { // quand on hover ça stop l'animation
+    animLogiciels.pause()
+});
+
+document.querySelector(".logiciels-row").addEventListener("mouseout", function(event) { // quand on quitte le hover ça repart l'animation
+  animLogiciels.resume();
+});
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* ANIM LOGICIELS    ANIM LOGICIELS    ANIM LOGICIELS */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */

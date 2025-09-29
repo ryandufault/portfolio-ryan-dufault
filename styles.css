@@ -418,26 +418,62 @@ h1 {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*               SECTION LOGICIELS     SECTION LOGICIELS      SECTION LOGICIELS             */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+.h1logicielswrapper {
+  display: grid; /* pour aligner le h1 */
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+}
+
+.h1logiciels {
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  grid-column-start: 3;
+  grid-column-end: 5;
+  align-self: start;
+  justify-self: start;
+}
+
 .logiciels {
   overflow: hidden;
-  padding-left: clamp(12px, 2.22vw, 36px);
-  padding-right: clamp(12px, 2.22vw, 36px);
+}
+
+.logiciels-wrapper {
+  position: relative;
 }
 
 .logiciels-row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: clamp(12px, 2.22vw, 36px);
-  transform: translateX(0);/
+  display: flex;
+  justify-content: center;
+  gap: var(--clamp24px);
+  transform: translateX(11%);
 }
 
-.logiciels-track img {
-  width: 40px;
+.logiciels-row img {
+  width: 80px; 
   aspect-ratio: 1 / 1;
   object-fit: cover;
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 1;
 }
+
+.padding-logiciels {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(16% + 4.44vw); /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px /// si 2.22vw = 24px alors 2.22x2 = 4.44vw*/
+  background: var(--second);
+  z-index: 10; /* pour que ce sois par dessus */
+}
+
+.padding-logiciels-left {
+  left: 0;
+}
+
+.padding-logiciels-right {
+  right: 0; /* pour que ce sois à droite */
+}
+
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
