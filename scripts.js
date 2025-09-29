@@ -76,3 +76,10 @@ function scrollApropos() {
 document
   .querySelector(".a-header:nth-child(2)")
   .addEventListener("click", scrollApropos);
+
+gsap.to(".logiciels-track", {
+  x: "-100%",
+  duration: 10,
+  repeat: -1,
+  ease: "none",
+});
