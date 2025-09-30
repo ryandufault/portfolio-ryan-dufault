@@ -87,9 +87,11 @@ document
 /* ANIM LOGICIELS    ANIM LOGICIELS    ANIM LOGICIELS */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
+gsap.set(".logiciels-row", { x: "18%" }); // set le x a 18% avant l'anim
+
 let animLogiciels = gsap.to(".logiciels-row", { // animations sur la bande de logiciels
-  x: "-11%",
-  duration: 5,
+  x: "-18%",
+  duration: 7,
   repeat: -1,
   yoyo: true,
   ease: "sine.inOut",
