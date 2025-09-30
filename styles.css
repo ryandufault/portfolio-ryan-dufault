@@ -541,7 +541,7 @@ h1 {
   .svg-container {
     width: 100%;
     height: auto;
-    padding-top: 50vh; /* pour centrer au milieu */
+    padding-top: 39vh; /* pour centrer au milieu */
   }
   
   .responsive-svg {
