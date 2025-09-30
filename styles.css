@@ -476,6 +476,52 @@ h1 {
   right: 0; /* pour que ce sois à droite */
 }
 
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               SECTION LOGICIELS     SECTION LOGICIELS      SECTION LOGICIELS             */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+
+.footer-wrapper {
+  display: grid; /* pour aligner le texte */
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+}
+
+.footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent */
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  grid-column-start: 3;
+  grid-column-end: 5;
+  align-self: start;
+  justify-self: start;
+  font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-links {
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  align-self: end;
+  justify-self: end;
+  font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+  object-fit: contain
+}
+
+.footer-links:nth-child(2) {
+  grid-column-start: 9
+}
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
