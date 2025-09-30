@@ -527,7 +527,7 @@ h1 {
 /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 450px) { 
   .header {
     padding-top: var(--clamp16px); /* ≈24px sur un viewport de 1080px */
     padding-left: var(--clamp16px);
@@ -654,7 +654,7 @@ h1 {
 .h1logiciels {
   padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 6;
 }
 
 .logiciels {
@@ -663,17 +663,25 @@ h1 {
 
 .logiciels-wrapper {
   position: relative;
+
 }
 
 .logiciels-row {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2.52vw;
-  transform: translateX(11%);
 }
 
-.logiciels-row img {
-  width: 50px; 
+.logiciels-row > img {
+  grid-row: 1;
+  width: 60px; 
+  padding: 0.2vw;
+}
+
+.logiciels-row > img:nth-child(odd) {
+  grid-row: 2;
+  width: 60px; 
   padding: 0.2vw;
 }
 
@@ -682,3 +690,4 @@ h1 {
 }
 
 }
+/* refaire un media query pour en dessous de 1400? et recopier le code du 450 mais changer les marges gap etc (en gros 16px -> 24px)*/
