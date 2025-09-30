@@ -447,7 +447,6 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 2.52vw;
-  transform: translateX(11%);
 }
 
 .logiciels-row img {
@@ -689,5 +688,89 @@ h1 {
   width: 16px; /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px */
 }
 
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.h1aproposwrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: var(--clamp16px);
 }
-/* refaire un media query pour en dessous de 1400? et recopier le code du 450 mais changer les marges gap etc (en gros 16px -> 24px)*/
+
+.h1apropos:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: start;
+  justify-self: start;
+}
+
+.h1apropos:nth-child(2) {
+  grid-column-start: 6;
+  align-self: start;
+  justify-self: start;
+}
+
+.apropos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: var(--clamp16px);
+  padding-right: var(--clamp16px);
+  padding-left: var(--clamp16px);
+}
+
+.apropos-container {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.apropos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  
+}
+.apropos {
+  grid-column-start: 1;
+  grid-column-end: -1; /* prend toute les colonnes */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 0.7vw 1fr 1fr 1fr; /* 4 rows pour les txt - le 0.7vw est pour s'adapter au svg */
+  column-gap: var(--clamp16px);
+}
+
+.apropos-photo-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.coordonnees {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 4;
+}
+
+.coordonnees2 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row: 4;
+  align-self: end;
+  text-align: right;
+}
+
+.description {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 3;
+  align-self: start;
+}
+
+.apropos-svg-container {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  align-self: start;
+}
+}
+/* refaire un media query pour en dessous de 1400? 
+et recopier le code du 450 mais changer les marges gap etc (en gros 16px -> 24px)*/
