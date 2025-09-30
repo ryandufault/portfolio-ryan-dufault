@@ -89,7 +89,7 @@ document
 
 let animLogiciels = gsap.to(".logiciels-row", { // animations sur la bande de logiciels
   x: "-11%",
-  duration: 2,
+  duration: 4,
   repeat: -1,
   yoyo: true,
   ease: "none",

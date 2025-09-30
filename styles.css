@@ -445,7 +445,7 @@ h1 {
 .logiciels-row {
   display: flex;
   justify-content: center;
-  gap: var(--clamp24px);
+  gap: 2.52vw;
   transform: translateX(11%);
 }
 
@@ -455,13 +455,14 @@ h1 {
   object-fit: cover;
   grid-row-start: 1;
   grid-row-end: 1;
+  border: 0.12vw solid var(--primary);
 }
 
 .padding-logiciels {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: calc(16% + 4.44vw); /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px /// si 2.22vw = 24px alors 2.22x2 = 4.44vw*/
+  width: calc(16% + 2.22vw); /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px /// si 2.22vw = 24px alors 2.22x2 = 4.44vw*/
   background: var(--second);
   z-index: 10; /* pour que ce sois par dessus */
 }
