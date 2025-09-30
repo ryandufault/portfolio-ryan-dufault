@@ -526,5 +526,81 @@ h1 {
 /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
+  .header {
+    padding-top: var(--clamp16px); /* ≈24px sur un viewport de 1080px */
+    padding-left: var(--clamp16px);
+
+  }
+
+  .svg-wrapper {
+    padding-left: var(--clamp16px);
+    padding-right: var(--clamp16px);
+  }
+  
+  .svg-container {
+    width: 100%;
+    height: auto;
+    padding-top: 50vh; /* pour centrer au milieu */
+  }
+  
+  .responsive-svg {
+    width: 100%;
+    height: 100%;
+  }
+/* ///////////////////////////////////////////////////////////////// */
+.projets-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* <- 6 colonnes de taille répartie également */
+  column-gap: var(--clamp16px);
+  padding-right: var(--clamp16px); /* marges */
+  padding-left: var(--clamp16px);
+  grid-template-rows: 3.4% 1fr;
+}
+
+.projets-filters-container {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.filter {
+  width: 25.0625vw; /* fait à l'oeil; environ 110px donc une semblant de tiers de la grid */
+  aspect-ratio: 112 / 26; /* garde le ratio largeur/hauteur */
+  border-radius: 9vw; /* ~40px */
+  font-size: 2.625vw; /*12px*/
+  gap: 2.2vw; /*9px*/
+}
+
+.filter-circle {
+  width: 3vw; /* 12px */
+  aspect-ratio: 1 / 1; /* garde le ratio largeur/hauteur */
+  margin-left: 2.2vw; /*9px*/
+}
+/* ///////////////////////////////////////////////////////////////// */
+.projets-container {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.projets-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* <- 6 colonnes de taille répartie également */
+  column-gap: var(--clamp16px);
+}
+
+.projet {
+  grid-column-start: 1;
+  grid-column-end: -1; /* le projet prend toute les colonens de la grid*/
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr); /* 4 rows pour les txt */
+  column-gap: var(--clamp24px); /* ≈24px sur un viewport de 1080px */
+  align-items: center;
+}
 }

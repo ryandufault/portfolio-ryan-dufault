@@ -92,7 +92,7 @@ let animLogiciels = gsap.to(".logiciels-row", { // animations sur la bande de lo
   duration: 5,
   repeat: -1,
   yoyo: true,
-  ease: "none",
+  ease: "sine.inOut",
 });
 
 document.querySelector(".logiciels-row").addEventListener("mouseover", function(event) { // quand on hover ça stop l'animation
