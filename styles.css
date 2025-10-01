@@ -226,6 +226,7 @@ h1 {
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 5;
+  align-self: start;
 }
 
 .projet-thumbnail {
@@ -526,7 +527,7 @@ h1 {
 /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
-@media screen and (max-width: 450px) { 
+@media screen and (max-width: 750px) { 
   .header {
     padding-top: var(--clamp16px); /* ≈24px sur un viewport de 1080px */
     padding-left: var(--clamp16px);
@@ -607,7 +608,7 @@ h1 {
     1fr
   );
   grid-template-rows: repeat(2, 1fr); /* 1 row pour img 1 row pour les textes */
-  column-gap: var(--clamp16px);
+  row-gap: var(--clamp16px);
   align-items: center;
 }
 
@@ -684,8 +685,6 @@ h1 {
 
 .logiciels-row > img:nth-child(even) {
   grid-row: 2;
-  width: 60px; 
-  padding: 0.2vw;
 }
 
 .padding-logiciels {
@@ -787,6 +786,7 @@ h1 {
   column-gap: var(--clamp16px);
   padding-right: var(--clamp16px);
   padding-left: var(--clamp16px);
+  padding-top: 4.16vw;
 }
 
 .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
@@ -813,7 +813,232 @@ h1 {
 
 
 }
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               MOBILE          MOBILE         MOBILE         MOBILE                       */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+@media screen and (max-width: 1450px) { /* tablettes et plus petits écrans */
+
+.projets-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* <- 6 colonnes de taille répartie également */
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px); /* marges */
+  padding-left: var(--clamp24px);
+  grid-template-rows: 3.4% 1fr;
+}
+
+.projets-filters-container {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
 
 
+/* ///////////////////////////////////////////////////////////////// */
+.projets-container {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.projets-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* <- 6 colonnes de taille répartie également */
+  column-gap: var(--clamp24px);
+  gap: clamp(20px, 16.17vw, 720px) 0px;
+}
+
+.projet-thumbnail-container {
+  align-self: start;
+}
+
+.projet-button {
+  grid-column-start: 7;
+  width: 100%;
+}
+
+.projet-titre {
+  font-size: 2.2vw; /*24px sur 1920x1080*/
+}
+
+.spacing:nth-of-type(3) {
+  padding-bottom: 20vw;
+}
+/* ///////////////////////////////////////////////////////////////// */
+
+.h1logicielswrapper {
+  display: grid; /* pour aligner le h1 */
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+}
+
+.h1logiciels {
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.logiciels {
+  overflow: hidden;
+}
+
+.logiciels-wrapper {
+  position: relative;
+
+}
+
+.logiciels-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.52vw;
+}
+
+.logiciels-row > img {
+  grid-row: 1;
+  width: 80px; 
+  padding: 0.2vw;
+}
+
+.logiciels-row > img:nth-child(even) {
+  grid-row: 2;
+}
+
+.padding-logiciels {
+  width: 24px; 
+}
+
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.h1aproposwrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: var(--clamp24px);
+}
+
+.h1apropos:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: start;
+  justify-self: start;
+}
+
+.h1apropos:nth-child(2) {
+  grid-column-start: 4;
+  align-self: start;
+  justify-self: start;
+}
+
+.apropos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+  min-height: 22vw;
+}
+
+.apropos-container {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  min-height: 22vw;
+}
+
+.apropos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  
+}
+.apropos {
+  grid-column-start: 1;
+  grid-column-end: -1; /* prend toute les colonnes */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 0.7vw 1fr 1fr; /* 4 rows pour les txt - le 0.7vw est pour s'adapter au svg */
+  column-gap: var(--clamp24px);
+  row-gap: var(--clamp24px);
+}
+
+.apropos-photo-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.coordonnees {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  align-self: start;
+  text-align: left;
+}
+
+.coordonnees2 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row: 3;
+  align-self: start;
+  text-align: right;
+}
+
+.description {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row: 2;
+  align-self: end;
+}
+
+.apropos-svg-container {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  align-self: start;
+}
+
+/* /////////////////////////////////////////////////////////////////////////// */
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+  padding-top: 16.16vw;
+}
+
+.footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: start;
+  justify-self: start;
+}
+
+.footer-links:nth-child(3) {
+  padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  align-self: end;
+  justify-self: end;
+  grid-column-start: 6;
+}
+
+.footer-links:nth-child(2) {
+  grid-column-start: 5;
+}
+
+
+}
 /* refaire un media query pour en dessous de 1400? 
 et recopier le code du 450 mais changer les marges gap etc (en gros 16px -> 24px)*/
