@@ -2,6 +2,7 @@
 
 # https://khaledkzy.github.io/pixel-vh-vw-converter/
 # https://cssgridgenerator.io/
+# https://getcameracrew.com/tools/youtube-embed-code-generator
 
 */
 
@@ -41,7 +42,7 @@
     position: sticky;
     top: 0;
     padding-top: var(--clamp24px); /* ≈24px sur un viewport de 1080px */
-    height: 130px;
+    height: 223px;
     z-index: 100;
     padding-left: var(--clamp24px);
     pointer-events: none;
@@ -70,7 +71,32 @@
   /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
   /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
   /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  /*               PROJET        PROJET        PROJET        PROJET        PROJET             */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
+  .projet-wrapper {
+    display: grid;
+    grid-template-columns: repeat(
+      12,
+      1fr
+    ); /* <- 12 colonnes de taille répartie également */
+    column-gap: var(--clamp24px);
+    padding-right: var(--clamp24px); /* marges */
+    padding-left: var(--clamp24px);
+    background-color: red;
+    overflow: hidden;
+  }
+
+  .youtube-container {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    overflow: hidden;
+  }
+
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /*               PROJET        PROJET        PROJET        PROJET        PROJET             */
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
   /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
   /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
   /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
