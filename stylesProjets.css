@@ -1,0 +1,213 @@
+/*
+
+# https://khaledkzy.github.io/pixel-vh-vw-converter/
+# https://cssgridgenerator.io/
+
+*/
+
+
+:root {
+    --primary: #3e17ff;
+    --second: #ffffff;
+    --clamp24px: clamp(
+      24px,
+      2.22vw,
+      36px
+    ); /* ≈24px sur un viewport de 1920x1080px */
+    --clamp16px: clamp(
+      16px,
+      0.833vw,
+      58px
+    ); /* ≈16px sur un viewport de 1920x1080px */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    font-family: Archivo;
+    background-color: var(--second);
+  }
+  
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  
+  .header {
+    position: sticky;
+    top: 0;
+    padding-top: var(--clamp24px); /* ≈24px sur un viewport de 1080px */
+    height: 130px;
+    z-index: 100;
+    padding-left: var(--clamp24px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .header:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .header-svg {
+    height: auto;
+    width: 31vw;
+    z-index: 5;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .header-svg:hover {
+    filter: blur(1px);
+    transition: all 0.3s ease;
+  }
+  
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  
+  
+  .footer-wrapper {
+    display: grid; /* pour aligner le texte */
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: var(--clamp24px);
+    padding-right: var(--clamp24px);
+    padding-left: var(--clamp24px);
+  }
+  
+  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent */
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    grid-column-start: 3;
+    grid-column-end: 5;
+    align-self: start;
+    justify-self: start;
+    font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  .footer-links {
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    align-self: end;
+    justify-self: end;
+    font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+    object-fit: contain
+  }
+  
+  .footer-links:nth-child(2) {
+    grid-column-start: 9
+  }
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  
+  /** ===============================     MEDIA   QUERIES    ================================ */
+  /** ===============================     MEDIA   QUERIES    ================================ */
+  /** ===============================     MEDIA   QUERIES    ================================ */
+  
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  /*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  
+  @media screen and (max-width: 1450px) { /* tablettes et plus petits écrans */
+  
+  /* /////////////////////////////////////////////////////////////////////////// */
+  
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--clamp24px);
+    padding-right: var(--clamp24px);
+    padding-left: var(--clamp24px);
+    padding-top: 16.16vw;
+  }
+  
+  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: start;
+    justify-self: start;
+  }
+  
+  .footer-links:nth-child(3) {
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    align-self: end;
+    justify-self: end;
+    grid-column-start: 6;
+  }
+  
+  .footer-links:nth-child(2) {
+    grid-column-start: 5;
+  }
+  
+  
+  }
+  
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
+  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+  
+  @media screen and (max-width: 750px) { 
+    .header {
+      padding-top: var(--clamp16px); /* ≈24px sur un viewport de 1080px */
+      padding-left: var(--clamp16px);
+  
+    }
+  
+    .header-svg {
+      width: 45vw; /* pour aligner à la 4ème colonne */
+    }
+  
+  /* /////////////////////////////////////////////////////////////////////////// */
+  
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--clamp16px);
+    padding-right: var(--clamp16px);
+    padding-left: var(--clamp16px);
+    padding-top: 4.16vw;
+  }
+  
+  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-self: start;
+    justify-self: start;
+  }
+  
+  .footer-links:nth-child(3) {
+    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    align-self: end;
+    justify-self: end;
+    grid-column-start: 6;
+  }
+  
+  .footer-links:nth-child(2) {
+    grid-column-start: 5;
+  }
+  
+  }
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+  /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
+  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
