@@ -8,92 +8,92 @@
 
 
 :root {
-    --primary: #3e17ff;
-    --second: #ffffff;
-    --clamp24px: clamp(
-      24px,
+  --primary: #3e17ff;
+  --second: #ffffff;
+  --clamp24px: clamp(24px,
       1.25vw,
-      36px
-    ); /* ≈24px sur un viewport de 1920x1080px */
-    --clamp16px: clamp(
-      16px,
+      36px);
+  /* ≈24px sur un viewport de 1920x1080px */
+  --clamp16px: clamp(16px,
       0.833vw,
-      58px
-    ); /* ≈16px sur un viewport de 1920x1080px */
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100%;
-    font-family: Archivo;
-    background-color: var(--second);
-  }
-  
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  
-  .header {
-    position: sticky;
-    top: 0;
-    padding-top: var(--clamp24px); /* ≈24px sur un viewport de 1080px */
-    height: 223px;
-    z-index: 100;
-    padding-left: var(--clamp24px);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-  
-  .header:hover {
-    opacity: 0.8;
-    transition: all 0.3s ease;
-  }
+      32px);
+  /* ≈16px sur un viewport de 1920x1080px */
+}
 
-  .header-svg {
-    height: auto;
-    width: 31vw;
-    z-index: 5;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: all 0.3s ease;
-  }
-  
-  .header-svg:hover {
-    filter: blur(1px);
-    transition: all 0.3s ease;
-  }
-  
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  /*               PROJET        PROJET        PROJET        PROJET        PROJET             */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .projet-wrapper {
-    display: grid;
-    grid-template-columns: repeat(
-      12,
-      1fr
-    ); /* <- 12 colonnes de taille répartie également */
-    column-gap: var(--clamp24px);
-    padding-right: var(--clamp24px); /* marges */
-    padding-left: var(--clamp24px);
-    /*background-color: red;  /* debug */
-    overflow: hidden;
-  }
+body {
+  height: 100%;
+  font-family: Archivo;
+  background-color: var(--second);
+}
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: var(--clamp24px);
+  /* ≈24px sur un viewport de 1080px */
+  height: 11.615vw;
+  z-index: 100;
+  padding-left: var(--clamp24px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.header:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.header-svg {
+  height: auto;
+  width: 31vw;
+  z-index: 5;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.header-svg:hover {
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               PROJET        PROJET        PROJET        PROJET        PROJET             */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+.projet-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12,
+      1fr);
+  /* <- 12 colonnes de taille répartie également */
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  /* marges */
+  padding-left: var(--clamp24px);
+  /*background-color: red;  /* debug */
+  overflow: hidden;
+}
 
 .youtube-container {
   grid-column-start: 1;
   grid-column-end: -1;
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
+  padding-top: 56.25%;
+  /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
   overflow: hidden;
   margin-bottom: 3.75vw;
 }
@@ -113,32 +113,31 @@
   margin: 0;
   align-self: start;
   color: var(--primary);
-  font-size: clamp(24px, 2.26vw, 58px); /*42px sur 1920x1080*/
+  font-size: clamp(42px, 2.813vw, 68px);
+  /*54px sur 1920x1080*/
 }
 
 .infos-projet {
-      grid-column-start: 4;
+  grid-column-start: 4;
   grid-column-end: 7;
-    display: grid;
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* <- 3 colonnes de taille répartie également */
-    grid-template-rows: repeat(4, 1fr);
-    column-gap: var(--clamp24px);
-    background-color: red;
-    overflow: hidden;
-      margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3,
+      1fr);
+  /* <- 3 colonnes de taille répartie également */
+  row-gap: 3.75vw;
+  /* équivalent espacement entre iframe et section infos */
+  column-gap: var(--clamp24px);
+  /*background-color: red; /* débug */
+  overflow: hidden;
+  margin: 0;
   color: var(--primary);
   font-size: 1.25vw;
 }
 
-/* faire la base après et après tu fera les nth of type */
 .projet-info {
   grid-column-start: 1;
   grid-column-end: 2;
   align-self: start;
-  grid-row: 1;
 }
 
 .projet-info-space {
@@ -146,75 +145,175 @@
   grid-column-end: 2;
   align-self: start;
   justify-self: end;
-  grid-row: 1;
 }
 
 .projet-type {
-    grid-column-start: 2;
+  grid-column-start: 2;
   grid-column-end: 4;
   align-self: start;
   grid-row: 1;
 }
 
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /*               PROJET        PROJET        PROJET        PROJET        PROJET             */
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  
-  
-  .footer-wrapper {
-    display: grid; /* pour aligner le texte */
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: var(--clamp24px);
-    padding-right: var(--clamp24px);
-    padding-left: var(--clamp24px);
-  }
-  
-  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent */
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
-    grid-column-start: 3;
-    grid-column-end: 5;
-    align-self: start;
-    justify-self: start;
-    font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 400;
-  }
-  
-  .footer-links {
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
-    align-self: end;
-    justify-self: end;
-    font-size: clamp(12px, 0.729vw, 36px); /* ≈14px sur un viewport de 1920x1080px */
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 400;
-    cursor: pointer;
-    object-fit: contain
-  }
-  
-  .footer-links:nth-child(2) {
-    grid-column-start: 9
-  }
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  
-  /** ===============================     MEDIA   QUERIES    ================================ */
-  /** ===============================     MEDIA   QUERIES    ================================ */
-  /** ===============================     MEDIA   QUERIES    ================================ */
-  
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  /*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  
-  @media screen and (max-width: 1450px) { /* tablettes et plus petits écrans */
-  
+
+.projet-info:nth-child(1) {
+  grid-row: 1;
+}
+
+.projet-info-space:nth-child(5) {
+  grid-row: 2;
+}
+
+.projet-info:nth-child(4) {
+  grid-row: 2;
+}
+
+.projet-info-space:nth-child(2) {
+  grid-row: 1;
+}
+
+.projet-logiciels {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-self: start;
+  grid-row: 2;
+}
+
+/* mention */
+.projet-info:nth-child(7) {
+  grid-row: 3;
+}
+
+.projet-info-space:nth-child(8) {
+  grid-row: 3;
+}
+
+.projet-mention {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-self: start;
+  grid-row: 3;
+}
+
+/* rôle */
+.projet-info:nth-child(10) {
+  grid-row: 4;
+}
+
+.projet-info-space:nth-child(11) {
+  grid-row: 4;
+}
+
+.projet-role {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-self: start;
+  grid-row: 4;
+}
+
+.projet-description {
+  grid-column-start: 7;
+  grid-column-end: 12;
+  margin: 0;
+  align-self: start;
+  justify-self: start;
+  color: var(--primary);
+  font-size: clamp(36px, 2.188vw, 58px);
+  /*42px sur 1920x1080*/
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               PROJET        PROJET        PROJET        PROJET        PROJET             */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*    GALERIE      GALERIE      GALERIE      GALERIE      GALERIE      GALERIE              */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+.spacing {
+  width: 100%;
+  height: 11.615vw
+    /* hauteur du header */
+}
+
+.galerie-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12,
+      1fr);
+  /* <- 12 colonnes de taille répartie également */
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  /* marges */
+  padding-left: var(--clamp24px);
+  /*background-color: red;  /* debug */
+  overflow: hidden;
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*    GALERIE      GALERIE      GALERIE      GALERIE      GALERIE      GALERIE              */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+
+.footer-wrapper {
+  display: grid;
+  /* pour aligner le texte */
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--clamp24px);
+  padding-right: var(--clamp24px);
+  padding-left: var(--clamp24px);
+}
+
+.footer-wrapper>p {
+  /* sélectionne l'enfant (<p>) du parent */
+  padding-bottom: 4.16vw;
+  /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  grid-column-start: 3;
+  grid-column-end: 5;
+  align-self: start;
+  justify-self: start;
+  font-size: clamp(12px, 0.729vw, 36px);
+  /* ≈14px sur un viewport de 1920x1080px */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-links {
+  padding-bottom: 4.16vw;
+  /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+  align-self: end;
+  justify-self: end;
+  font-size: clamp(12px, 0.729vw, 36px);
+  /* ≈14px sur un viewport de 1920x1080px */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+  object-fit: contain
+}
+
+.footer-links:nth-child(2) {
+  grid-column-start: 9
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+/** ===============================     MEDIA   QUERIES    ================================ */
+/** ===============================     MEDIA   QUERIES    ================================ */
+/** ===============================     MEDIA   QUERIES    ================================ */
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+@media screen and (max-width: 1450px) {
+  /* tablettes et plus petits écrans */
+
   /* /////////////////////////////////////////////////////////////////////////// */
-  
+
   .footer-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -223,50 +322,55 @@
     padding-left: var(--clamp24px);
     padding-top: 16.16vw;
   }
-  
-  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+
+  .footer-wrapper>p {
+    /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
+    padding-bottom: 4.16vw;
+    /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     grid-column-start: 1;
     grid-column-end: 3;
     align-self: start;
     justify-self: start;
   }
-  
+
   .footer-links:nth-child(3) {
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    padding-bottom: 4.16vw;
+    /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     align-self: end;
     justify-self: end;
     grid-column-start: 6;
   }
-  
+
   .footer-links:nth-child(2) {
     grid-column-start: 5;
   }
-  
-  
+
+
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*               MOBILE          MOBILE         MOBILE         MOBILE                       */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+@media screen and (max-width: 750px) {
+  .header {
+    padding-top: var(--clamp16px);
+    /* ≈24px sur un viewport de 1080px */
+    padding-left: var(--clamp16px);
+
   }
-  
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /*               TABLETTE          TABLETTE         TABLETTE         TABLETTE               */
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
-  /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-  
-  @media screen and (max-width: 750px) { 
-    .header {
-      padding-top: var(--clamp16px); /* ≈24px sur un viewport de 1080px */
-      padding-left: var(--clamp16px);
-  
-    }
-  
-    .header-svg {
-      width: 45vw; /* pour aligner à la 4ème colonne */
-    }
-  
+
+  .header-svg {
+    width: 45vw;
+    /* pour aligner à la 4ème colonne */
+  }
+
   /* /////////////////////////////////////////////////////////////////////////// */
-  
+
   .footer-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -275,27 +379,31 @@
     padding-left: var(--clamp16px);
     padding-top: 4.16vw;
   }
-  
-  .footer-wrapper > p { /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+
+  .footer-wrapper>p {
+    /* sélectionne l'enfant (<p>) du parent = (Ryan Dufault)*/
+    padding-bottom: 4.16vw;
+    /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     grid-column-start: 1;
     grid-column-end: 3;
     align-self: start;
     justify-self: start;
   }
-  
+
   .footer-links:nth-child(3) {
-    padding-bottom: 4.16vw; /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
+    padding-bottom: 4.16vw;
+    /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     align-self: end;
     justify-self: end;
     grid-column-start: 6;
   }
-  
+
   .footer-links:nth-child(2) {
     grid-column-start: 5;
   }
-  
-  }
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-  /*               MOBILE          MOBILE         MOBILE         MOBILE                       */
-  /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*               MOBILE          MOBILE         MOBILE         MOBILE                       */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
