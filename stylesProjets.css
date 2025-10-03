@@ -247,6 +247,98 @@ body {
   overflow: hidden;
 }
 
+.image1 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 1;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
+  overflow: hidden;
+  margin-bottom: 3.75vw;
+}
+
+.image1 img {
+  border: 0.12vw solid var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image2 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row: 2;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
+  overflow: hidden;
+  margin-bottom: 3.75vw;
+}
+
+.image2 img {
+  border: 0.12vw solid var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image3456 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: var(--clamp24px);
+  row-gap: var(--clamp24px);
+}
+
+.image3456 img {
+  width: 100%;
+  /*height: 500px;*/
+  /* alternative si aspect ratio est capricieux */
+  aspect-ratio: 16 /9;
+  object-fit: cover;
+}
+
+.image3456 img:nth-child(1) {
+  border: 0.12vw solid var(--primary);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image3456 img:nth-child(2) {
+  border: 0.12vw solid var(--primary);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.image3456 img:nth-child(3) {
+  border: 0.12vw solid var(--primary);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.image3456 img:nth-child(4) {
+  border: 0.12vw solid var(--primary);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /*    GALERIE      GALERIE      GALERIE      GALERIE      GALERIE      GALERIE              */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
@@ -268,7 +360,7 @@ body {
   /* sélectionne l'enfant (<p>) du parent */
   padding-bottom: 4.16vw;
   /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
-  grid-column-start: 3;
+  grid-column-start: 1;
   grid-column-end: 5;
   align-self: start;
   justify-self: start;
@@ -294,7 +386,7 @@ body {
 }
 
 .footer-links:nth-child(2) {
-  grid-column-start: 9
+  grid-column-start: 11
 }
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */

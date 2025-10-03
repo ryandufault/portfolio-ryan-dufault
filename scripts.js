@@ -72,12 +72,12 @@ function scrollApropos() {
   gsap.to(window, {
     scrollTo: { y: aproposSection.offsetTop - 70 }, // scroll à la section À propos
     duration: 1,
-    ease: "power2.inOut",
+    ease: "power2.inOut", // lissage
   });
 }
 
 document
-  .querySelector(".a-header:nth-child(2)")
+  .querySelector(".a-header:nth-child(2)") // sélectionne le lien À propos
   .addEventListener("click", scrollApropos); // scroll à la section À propos au click du <a>
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
@@ -90,11 +90,11 @@ document
 gsap.set(".logiciels-row", { x: "18%" }); // set le x a 18% avant l'anim
 
 let animLogiciels = gsap.to(".logiciels-row", { // animations sur la bande de logiciels
-  x: "-18%",
+  x: "-18%", // déplace de gauche à droite avec le yoyo
   duration: 7,
   repeat: -1,
-  yoyo: true,
-  ease: "sine.inOut",
+  yoyo: true, // effet de "yoyo"
+  ease: "sine.inOut", // lissage
 });
 
 document.querySelector(".logiciels-row").addEventListener("mouseover", function(event) { // quand on hover ça stop l'animation
@@ -107,4 +107,21 @@ document.querySelector(".logiciels-row").addEventListener("mouseout", function(e
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* ANIM LOGICIELS    ANIM LOGICIELS    ANIM LOGICIELS */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+//projetFleur
+document.querySelectorAll(".projetFleur").forEach(function(element) { // sélectionne tout les éléments avec la classe
+    element.addEventListener("click", projetFleur); // call la fonction quand clic
+});
+
+function projetFleur() {
+    window.location.href = "fleur.html"; // dirige l'utilisateur sur la page du projet
+}
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
