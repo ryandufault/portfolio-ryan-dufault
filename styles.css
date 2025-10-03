@@ -1,6 +1,6 @@
 /*
 
-# https://khaledkzy.github.io/pixel-vh-vw-converter/
+# https://cssunitconverter.vercel.app/px-to-vw
 # https://cssgridgenerator.io/
 
 */
@@ -11,7 +11,7 @@
   --second: #ffffff;
   --clamp24px: clamp(
     24px,
-    2.22vw,
+    1.25vw,
     36px
   ); /* ≈24px sur un viewport de 1920x1080px */
   --clamp16px: clamp(
@@ -58,7 +58,7 @@ body {
   padding-left: var(--clamp24px); /* ≈24px sur un viewport de 1080px */
   padding-right: clamp(
     12px,
-    2.22vw,
+    1.25vw,
     36px
   ); /* ≈24px sur un viewport de 1080px */
   height: 100%;
@@ -472,7 +472,7 @@ h1 {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: calc(16% + 2.22vw); /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px /// si 2.22vw = 24px alors 2.22x2 = 4.44vw*/
+  width: calc(16% + 1.25vw); /* puisque 2 colonnes + le padding 24px + le gap 24px ( 100% / 12 colonnes = 8,33% x 2 + 24px + 24px /// si 1.25vw = 24px alors 1,25x2 = 4.44vw*/
   background: var(--second);
   z-index: 10; /* pour que ce sois par dessus */
 }

@@ -1,6 +1,6 @@
 /*
 
-# https://khaledkzy.github.io/pixel-vh-vw-converter/
+# https://cssunitconverter.vercel.app/px-to-vw
 # https://cssgridgenerator.io/
 # https://getcameracrew.com/tools/youtube-embed-code-generator
 
@@ -12,7 +12,7 @@
     --second: #ffffff;
     --clamp24px: clamp(
       24px,
-      2.22vw,
+      1.25vw,
       36px
     ); /* ≈24px sur un viewport de 1920x1080px */
     --clamp16px: clamp(
@@ -84,7 +84,7 @@
     column-gap: var(--clamp24px);
     padding-right: var(--clamp24px); /* marges */
     padding-left: var(--clamp24px);
-    background-color: red;
+    /*background-color: red;  /* debug */
     overflow: hidden;
   }
 
@@ -105,6 +105,55 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.projet-titre {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 0;
+  align-self: start;
+  color: var(--primary);
+  font-size: clamp(24px, 2.26vw, 58px); /*42px sur 1920x1080*/
+}
+
+.infos-projet {
+      grid-column-start: 4;
+  grid-column-end: 7;
+    display: grid;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* <- 3 colonnes de taille répartie également */
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: var(--clamp24px);
+    background-color: red;
+    overflow: hidden;
+      margin: 0;
+  color: var(--primary);
+  font-size: 1.25vw;
+}
+
+/* faire la base après et après tu fera les nth of type */
+.projet-info {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: start;
+  grid-row: 1;
+}
+
+.projet-info-space {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: start;
+  justify-self: end;
+  grid-row: 1;
+}
+
+.projet-type {
+    grid-column-start: 2;
+  grid-column-end: 4;
+  align-self: start;
+  grid-row: 1;
 }
 
   /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
