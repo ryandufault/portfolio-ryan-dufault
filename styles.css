@@ -541,12 +541,27 @@ h1 {
 
 
 .footer-wrapper {
+  position: relative;
   display: grid;
   /* pour aligner le texte */
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--clamp24px);
   padding-right: var(--clamp24px);
   padding-left: var(--clamp24px);
+  background: linear-gradient(to top, var(--primary), transparent);
+}
+
+.footer-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://grainy-gradients.vercel.app/noise.svg);
+  filter: contrast(170%) brightness(1000%);
+  pointer-events: none;
+  /* https://css-tricks.com/grainy-gradients/ */
 }
 
 .footer-wrapper>p {
@@ -1134,6 +1149,7 @@ h1 {
     padding-right: var(--clamp16px);
     padding-left: var(--clamp16px);
     padding-top: 4.16vw;
+
   }
 
   .footer-wrapper>p {
@@ -1141,7 +1157,7 @@ h1 {
     padding-bottom: 4.16vw;
     /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 5;
     align-self: start;
     justify-self: start;
   }

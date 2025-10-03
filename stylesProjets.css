@@ -131,7 +131,7 @@ body {
   overflow: hidden;
   margin: 0;
   color: var(--primary);
-  font-size: 1.25vw;
+  font-size: clamp(18px, 1.25vw, 28px);
 }
 
 .projet-info {
@@ -305,7 +305,7 @@ body {
   width: 100%;
   /*height: 500px;*/
   /* alternative si aspect ratio est capricieux */
-  aspect-ratio: 16 /9;
+  /*aspect-ratio: 16 /9;*/
   object-fit: cover;
 }
 
@@ -384,7 +384,7 @@ body {
   text-decoration: none;
   font-weight: 400;
   cursor: pointer;
-  object-fit: contain
+  object-fit: contain;
 }
 
 .footer-links:nth-child(2) {
@@ -414,7 +414,6 @@ body {
     column-gap: var(--clamp24px);
     padding-right: var(--clamp24px);
     padding-left: var(--clamp24px);
-    padding-top: 16.16vw;
   }
 
   .footer-wrapper>p {
@@ -455,13 +454,253 @@ body {
     padding-top: var(--clamp16px);
     /* ≈24px sur un viewport de 1080px */
     padding-left: var(--clamp16px);
-
+    height: 15vw;
   }
 
   .header-svg {
     width: 45vw;
     /* pour aligner à la 4ème colonne */
   }
+
+  /* /////////////////////////////////////////////////////////////////////////// */
+
+  .youtube-container {
+    margin-bottom: 10vw;
+    /* x3 du grand viewport */
+  }
+
+  .projet-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6,
+        1fr);
+    /* <- 12 colonnes de taille répartie également */
+    column-gap: var(--clamp16px);
+    padding-right: var(--clamp16px);
+    /* marges */
+    padding-left: var(--clamp16px);
+    /*background-color: red;  /* debug */
+    overflow: hidden;
+  }
+
+  .projet-titre {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: clamp(32px, 1.875vw, 42px);
+    /*32px*/
+    grid-row: 2;
+  }
+
+  .infos-projet {
+    padding-top: 10vw;
+    /* espacement egal au yt container */
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: 3;
+    row-gap: 7.5vw;
+    /* x2 */
+    font-size: var(--clamp16px)
+  }
+
+  .projet-info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: start;
+  }
+
+  .projet-info-space {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: start;
+    justify-self: center;
+  }
+
+  .projet-type {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: start;
+    grid-row: 1;
+    text-align: right;
+  }
+
+
+  .projet-info:nth-child(1) {
+    grid-row: 1;
+  }
+
+  .projet-info-space:nth-child(5) {
+    grid-row: 2;
+  }
+
+  .projet-info:nth-child(4) {
+    grid-row: 2;
+  }
+
+  .projet-info-space:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .projet-logiciels {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: start;
+    grid-row: 2;
+    text-align: right;
+  }
+
+  /* mention */
+  .projet-info:nth-child(7) {
+    grid-row: 3;
+  }
+
+  .projet-info-space:nth-child(8) {
+    grid-row: 3;
+  }
+
+  .projet-mention {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: start;
+    grid-row: 3;
+    text-align: right;
+  }
+
+  /* rôle */
+  .projet-info:nth-child(10) {
+    grid-row: 4;
+  }
+
+  .projet-info-space:nth-child(11) {
+    grid-row: 4;
+  }
+
+  .projet-role {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-self: start;
+    grid-row: 4;
+    text-align: right;
+  }
+
+  .projet-description {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    font-size: var(--clamp16px);
+    text-align: right;
+    grid-row: 2;
+  }
+
+  /* /////////////////////////////////////////////////////////////////////////// */
+
+  .galerie-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6,
+        1fr);
+    column-gap: var(--clamp16px);
+    padding-right: var(--clamp16px);
+    padding-left: var(--clamp16px);
+  }
+
+  .image1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
+    overflow: hidden;
+    margin-bottom: 3.75vw;
+    aspect-ratio: 1/1;
+  }
+
+  .image1 img {
+    border: 0.12vw solid var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image2 {
+    grid-column-start: 4;
+    grid-column-end: -1;
+    grid-row: 1;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* pour garder le ratio de l'image (9 / 16 = 0.5625 donc 56.25%) / https://ontopmarketing.agency/css-aspect-ratio-calculator/ */
+    overflow: hidden;
+    margin-bottom: 3.75vw;
+  }
+
+  .image2 img {
+    border: 0.12vw solid var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image3456 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: var(--clamp24px);
+    row-gap: var(--clamp24px);
+  }
+
+  .image3456 img,
+  .image3456 video {
+    width: 100%;
+    /*height: 500px;*/
+    /* alternative si aspect ratio est capricieux */
+    object-fit: cover;
+  }
+
+  .image3456 .video1 {
+    border: 0.12vw solid var(--primary);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
+  }
+
+  .image3456-1 {
+    border: 0.12vw solid var(--primary);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    aspect-ratio: 4/3;
+    align-self: start;
+  }
+
+  .image3456 .video2 {
+    border: 0.12vw solid var(--primary);
+    grid-column-start: -1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: start;
+  }
+
+  .image3456-4 {
+    border: 0.12vw solid var(--primary);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: start;
+  }
+
+
 
   /* /////////////////////////////////////////////////////////////////////////// */
 
@@ -472,6 +711,7 @@ body {
     padding-right: var(--clamp16px);
     padding-left: var(--clamp16px);
     padding-top: 4.16vw;
+
   }
 
   .footer-wrapper>p {
@@ -479,9 +719,10 @@ body {
     padding-bottom: 4.16vw;
     /*équivalent responsive de l'espacement entre le h1 projets et les filtres*/
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 5;
     align-self: start;
     justify-self: start;
+
   }
 
   .footer-links:nth-child(3) {
