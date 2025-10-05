@@ -266,6 +266,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .image2 {
@@ -315,6 +316,7 @@ body {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  object-fit: cover;
 }
 
 .image3456-1 {
@@ -323,6 +325,7 @@ body {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  object-fit: cover;
 }
 
 .image3456 .video2 {
@@ -331,6 +334,7 @@ body {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+  object-fit: cover;
 }
 
 .image3456-4 {
@@ -339,6 +343,7 @@ body {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  object-fit: cover;
 }
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
@@ -357,21 +362,6 @@ body {
   column-gap: var(--clamp24px);
   padding-right: var(--clamp24px);
   padding-left: var(--clamp24px);
-  background: linear-gradient(to top, var(--primary), transparent 90%);
-}
-
-.footer-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(/assets/noise.svg);
-  /* https://grainy-gradients.vercel.app/ */
-  filter: contrast(2350%) brightness(1000%);
-  pointer-events: none;
-  /* https://css-tricks.com/grainy-gradients/ */
 }
 
 .footer-wrapper>p {
@@ -603,7 +593,8 @@ body {
     grid-column-start: 3;
     grid-column-end: -1;
     font-size: var(--clamp16px);
-    text-align: right;
+    text-align: right !important;
+    /* car l'animation gsap textsplit override l'alignement du text*/
     grid-row: 2;
   }
 
