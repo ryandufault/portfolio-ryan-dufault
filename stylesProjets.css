@@ -32,6 +32,12 @@ body {
   background-color: var(--second);
 }
 
+body::selection {
+  background-color: var(--primary);
+  filter: invert(100%);
+  color: var(--second);
+}
+
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */

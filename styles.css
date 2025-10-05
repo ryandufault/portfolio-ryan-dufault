@@ -28,7 +28,12 @@
 body {
   height: 100%;
   font-family: Archivo;
-  background-color: var(--second);
+}
+
+body::selection {
+  background-color: var(--primary);
+  filter: invert(100%);
+  color: var(--second);
 }
 
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
