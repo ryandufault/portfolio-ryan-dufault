@@ -12,4 +12,3 @@ Multipage
 ### Type de composant vue.js
 - Filtre dynamique de projet
 - Galerie interactive
-- Toggle dark mode / light mode
