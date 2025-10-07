@@ -2,12 +2,23 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(SplitText);
 
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
 // Header svg
 document.querySelector(".header-svg").addEventListener("click", accueil); // quand on clique sur le header
 
 function accueil() {
     window.location.href = "index.html"; // quand on clique sur le header ça ramène à l'accueil
   }
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* ANIMATIONS GSAP ANIMATIONS GSAP ANIMATIONS GSAP    */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 // Anim du texte
 const splitDesc = new SplitText(".projet-description", {
@@ -59,3 +70,7 @@ gsap.from(split3.lines, {
     toggleActions: "play none none reverse", // l'animation joue dans le sens opposé quand on remonte vers le haut
   },
 });*/
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* ANIMATIONS GSAP ANIMATIONS GSAP ANIMATIONS GSAP    */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
