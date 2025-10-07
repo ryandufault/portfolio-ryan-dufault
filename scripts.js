@@ -122,6 +122,51 @@ function projetFleur() {
     window.location.href = "fleur.html"; // dirige l'utilisateur sur la page du projet
 }
 
+//projetBirden
+document.querySelectorAll(".projetBirden").forEach(function(element) { // sélectionne tout les éléments avec la classe
+  element.addEventListener("click", projetBirden); // call la fonction quand clic
+});
+
+function projetBirden() {
+  window.location.href = "birden.html"; // dirige l'utilisateur sur la page du projet
+}
+
+//projetLecorps
+document.querySelectorAll(".projetLecorps").forEach(function(element) { // sélectionne tout les éléments avec la classe
+  element.addEventListener("click", projetLecorps); // call la fonction quand clic
+});
+
+function projetLecorps() {
+  window.location.href = "le_corps.html"; // dirige l'utilisateur sur la page du projet
+}
+
+//projetMaisonhantee
+document.querySelectorAll(".projetMaisonhantee").forEach(function(element) { // sélectionne tout les éléments avec la classe
+  element.addEventListener("click", projetMaisonhantee); // call la fonction quand clic
+});
+
+function projetMaisonhantee() {
+  window.location.href = "maison_hantee.html"; // dirige l'utilisateur sur la page du projet
+}
+
+//projetAutoportrait
+document.querySelectorAll(".projetAutoportrait").forEach(function(element) { // sélectionne tout les éléments avec la classe
+  element.addEventListener("click", projetAutoportrait); // call la fonction quand clic
+});
+
+function projetAutoportrait() {
+  window.location.href = "autoportrait.html"; // dirige l'utilisateur sur la page du projet
+}
+
+//projetIncisive
+document.querySelectorAll(".projetIncisive").forEach(function(element) { // sélectionne tout les éléments avec la classe
+  element.addEventListener("click", projetIncisive); // call la fonction quand clic
+});
+
+function projetIncisive() {
+  window.location.href = "incisive.html"; // dirige l'utilisateur sur la page du projet
+}
+
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
