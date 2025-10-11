@@ -37,38 +37,41 @@
     <!-- ========================================          SECTION PROJET          ============================================== -->
     <!-- =======================================https://getcameracrew.com/tools/youtube-embed-code-generator=============================================== -->
     <section class="projet-wrapper" data-index="1">
+        <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
+        <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
+
         <div class="youtube-container">
             <iframe src="https://www.youtube.com/embed/4q84KdBXkD4?rel=0&rel=0" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
+
         <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
-        <div class="infos-projet">
+        <!-- le "?" fait en sorte d'afficher quand les données arrivent sinon c'est broken (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) -->
+        <div class="infos-projet" v-show="etat === 'loaded'">
             <p class="projet-info">Type</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-type">Vidéo</p>
+            <p class="projet-type">{{ projetActuel?.type }}</p>
             <!--                                -->
             <p class="projet-info">Logiciels</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-logiciels">After Effects<br>
-                DaVinci Resolve
-                <!--                                -->
+            <div class="projet-logiciels">
+                <p v-for="(logiciel, index) in projetActuel?.logiciels" v-html="logiciel"></p>
+                <!-- v-html est pour que vue interprète les balises <br>/ht,l qui sont dans le array comme du html (et non du texte) -->
+            </div>
+
+            <!--                                -->
             <p class="projet-info">Mention</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-mention">Personnel</p>
+            <p class="projet-mention">{{ projetActuel?.mention }}</p>
             <!--                                -->
             <p class="projet-info">Rôle</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-role">Direction photo<br>
-                Monteur vidéo</p>
+            <div class="projet-role">
+                <p v-for="(role, index) in projetActuel?.roles" v-html="role"></p>
+            </div>
         </div>
-        <p class="projet-description">
-            Birden est un clip musical présentant une réalité abstraite, inspirée du quotidien d'une personne
-            constamment en mouvement.<br> Au fil des saisons et du temps, la réalité change, pour le meilleur ou pour le
-            pire.<br> <br>Le clip est tourné à l'iPhone 5 en portrait dans le but de donner un sentiment d'authenticité,
-            donnant au spectateur l'impression de prendre une marche à travers les saisons.<br><br>En collaboration avec
-            l'artiste "yorel1"
-        </p>
+        <p class="projet-description" v-html="projetActuel?.description"></p>
     </section>
     <div class="spacing"></div>
     <section class="galerie-wrapper">

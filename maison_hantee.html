@@ -15,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
   <script src="https://assets.codepen.io/16327/SplitText3.min.js" defer></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="scriptsMaisonHantee.js" defer></script>
   <script src="scriptsProjets.js" defer></script>
 </head>
 
@@ -35,41 +36,59 @@
   <!-- ========================================          SECTION PROJET          ============================================== -->
   <!-- =======================================https://getcameracrew.com/tools/youtube-embed-code-generator=============================================== -->
   <section class="projet-wrapper" data-index="3">
+    <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
+    <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
     <div class="youtube-container">
       <iframe src="https://www.youtube.com/embed/l939mJIcUs?rel=0&rel=0" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
-    <p class="projet-titre">Maison Hantée</p>
-    <div class="infos-projet">
+
+    <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
+    <!-- le "?" fait en sorte d'afficher quand les données arrivent sinon c'est broken (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) -->
+    <div class="infos-projet" v-show="etat === 'loaded'">
       <p class="projet-info">Type</p>
       <p class="projet-info-space">•</p>
-      <p class="projet-type">Web</p>
+      <p class="projet-type">{{ projetActuel?.type }}</p>
       <!--                                -->
-      <p class="projet-info">Langages</p>
+      <p class="projet-info">Logiciels</p>
       <p class="projet-info-space">•</p>
-      <p class="projet-logiciels">
-        HTML<br />
-        CSS<br />
-        <!--                                -->
-      </p>
+      <div class="projet-logiciels">
+        <p v-for="(logiciel, index) in projetActuel?.logiciels" v-html="logiciel"></p>
+        <!-- v-html est pour que vue interprète les balises <br>/ht,l qui sont dans le array comme du html (et non du texte) -->
+      </div>
 
+      <!--                                -->
       <p class="projet-info">Mention</p>
       <p class="projet-info-space">•</p>
-      <p class="projet-mention">Académique</p>
+      <p class="projet-mention">{{ projetActuel?.mention }}</p>
       <!--                                -->
-      <p class="projet-info">Rôles</p>
+      <p class="projet-info">Rôle</p>
       <p class="projet-info-space">•</p>
-      <p class="projet-role">
-        Développeur web<br />
-        Designer graphique<br />
-      </p>
+      <div class="projet-role">
+        <p v-for="(role, index) in projetActuel?.roles" v-html="role"></p>
+      </div>
     </div>
-    <p class="projet-description">
-      Maison Hantée est un projet de portail web sur le thème de l'horreur.
-      L'interacteur se retrouve devant des portes, chacune menant à des
-      créatures terrifiantes.
-    </p>
+    <p class="projet-description" v-html="projetActuel?.description"></p>
+  </section>
+  <div class="spacing"></div>
+  <section class="galerie-wrapper">
+    <div class="image1">
+      <img src="./assets/fleur/fleur1.webp" />
+    </div>
+    <div class="image2">
+      <img src="./assets/fleur/fleur2.webp" />
+    </div>
+    <div class="image3456">
+      <img class="image3456-1" src="./assets/fleur/fleur3.webp" />
+      <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy">
+        <source src="./assets/fleur/fleur1.webm" type="video/webm" />
+      </video>
+      <video class="video2" autoplay loop muted playsinline aria-hidden="true" loading="lazy">
+        <source src="./assets/fleur/fleur2.webm" type="video/webm" />
+      </video>
+      <img class="image3456-4" src="./assets/fleur/fleur6.webp" />
+    </div>
   </section>
   <div class="spacing"></div>
   <section class="galerie-wrapper">

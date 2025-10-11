@@ -21,6 +21,7 @@ function accueil() {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 // Anim du texte
+setTimeout(() => { // délai (timeout) pour que le dom aille le temps de process le fetch (sinon le target est not found)
 const splitDesc = new SplitText(".projet-description", {
   type: "lines", // divise le texte en lignes
 });
@@ -35,7 +36,8 @@ gsap.from(splitDesc.lines, {
     end: "bottom+=50%", // l'animation se finit à plus de 50% du bas de l'élément
     toggleActions: "play none none reverse", // l'animation joue dans le sens opposé quand on remonte vers le haut
   },
-});
+  });
+}, 100); // 100 ms, presque pas perceptible
 
 // V   à déterminer, peut-être trop d'animations?    V */
 
