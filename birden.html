@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scriptsBirden.js" defer></script>
     <script src="scriptsProjets.js" defer></script>
 
 </head>
@@ -35,13 +36,13 @@
     <!-- ======================================================================================================================== -->
     <!-- ========================================          SECTION PROJET          ============================================== -->
     <!-- =======================================https://getcameracrew.com/tools/youtube-embed-code-generator=============================================== -->
-    <section class="projet-wrapper">
+    <section class="projet-wrapper" data-index="1">
         <div class="youtube-container">
             <iframe src="https://www.youtube.com/embed/4q84KdBXkD4?rel=0&rel=0" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <p class="projet-titre">Birden</p>
+        <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
         <div class="infos-projet">
             <p class="projet-info">Type</p>
             <p class="projet-info-space">•</p>

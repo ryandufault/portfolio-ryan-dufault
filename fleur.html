@@ -15,8 +15,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="scriptsProjets.js" defer></script>
     <script src="scriptsFleur.js" defer></script>
+    <script src="scriptsProjets.js" defer></script>
+
 </head>
 
 <body>
@@ -36,47 +37,39 @@
     <!-- ========================================          SECTION PROJET          ============================================== -->
     <!-- =======================================https://getcameracrew.com/tools/youtube-embed-code-generator=============================================== -->
     <section class="projet-wrapper" data-index="0">
-        <p v-if="etat === 'loading'">Chargement...</p>
-        <p v-if="etat === 'error'">Erreur lors du chargement des projets.</p>
+        <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
+        <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
         <div class="youtube-container">
             <iframe src="https://www.youtube.com/embed/oO8g67QVuCQ?rel=0&rel=0" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <p class="projet-titre" v-if="etat === 'ready'">{{ projetActuel?.titre }}</p>
-        <div class="infos-projet">
+        <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
+        <!-- le "?" fait en sorte d'afficher quand les données arrivent sinon c'est broken (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) -->
+        <div class="infos-projet" v-show="etat === 'loaded'">
             <p class="projet-info">Type</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-type">Vidéo</p>
+            <p class="projet-type">{{ projetActuel?.type }}</p>
             <!--                                -->
             <p class="projet-info">Logiciels</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-logiciels">After Effects<br>
-                Davinci Resolve<br>
-                Maya<br>
-                Touch Designer<br>
-                FL Studio<br>
-                Cubase</p>
+            <div class="projet-logiciels">
+                <p v-for="(logiciel, index) in projetActuel?.logiciels" v-html="logiciel"></p>
+                <!-- v-html est pour que vue interprète les balises <br>/ht,l qui sont dans le array comme du html (et non du texte) -->
+            </div>
+
             <!--                                -->
             <p class="projet-info">Mention</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-mention">Académique</p>
+            <p class="projet-mention">{{ projetActuel?.mention }}</p>
             <!--                                -->
             <p class="projet-info">Rôle</p>
             <p class="projet-info-space">•</p>
-            <p class="projet-role">Modélisateur 3D<br>
-                Animateur 3D<br>
-                Intégrateur multimédia<br>
-                Compositeur audio<br>
-                Monteur vidéo</p>
+            <div class="projet-role">
+                <p v-for="(role, index) in projetActuel?.roles" v-html="role"></p>
+            </div>
         </div>
-        <p class="projet-description">
-            Projet réalisé dans le cadre de 3 cours explorant différents aspects du multimédia dans le but de former un
-            paysage abstrait.<br><br>
-            Fleur est une oeuvre contemplative présentant une métamorphose douce et abstraite d'un pissenlit en
-            lucioles. Le spectateur explore un monde révélant une danse fragile entre l'infiniment petit et l'infiniment
-            vaste.
-        </p>
+        <p class="projet-description" v-html="projetActuel?.description"></p>
     </section>
     <div class="spacing"></div>
     <section class="galerie-wrapper">

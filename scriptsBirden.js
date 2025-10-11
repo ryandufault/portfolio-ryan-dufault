@@ -12,7 +12,7 @@ const appli = Vue.createApp({
     },
     computed: {
         projetActuel() {
-            return this.projets[this.idProjet]; // assigne à l'array l'id du projet
+            return this.projets[this.idProjet];  // assigne à l'array l'id du projet
         }
     },
     mounted() {

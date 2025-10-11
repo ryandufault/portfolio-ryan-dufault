@@ -80,6 +80,13 @@ body::selection {
 /*               PROJET        PROJET        PROJET        PROJET        PROJET             */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
+.fetchEtat {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+  color: #b9b9b9
+}
+
 .projet-wrapper {
   display: grid;
   grid-template-columns: repeat(12,
