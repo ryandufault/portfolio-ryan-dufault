@@ -74,3 +74,34 @@ gsap.from(split3.lines, {
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* ANIMATIONS GSAP ANIMATIONS GSAP ANIMATIONS GSAP    */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* VUE FETCH   VUE FETCH   VUE FETCH   VUE FETCH      */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+const appli = Vue.createApp({
+    data() {
+        return {
+            projets: [],  // array vide qui sera rempli avec les projets dans le fetch
+            message: "Chargement..."  // message par défaut
+        };
+    },
+    mounted() {
+        console.log("L'app Vue a été créée et montée au DOM (mounted) !"); // 
+
+        fetch('./assets/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                this.projets = data.projets;  // récupère les données json des projets et les mets dans l'array
+            })
+            .catch(error => {
+                console.error(error); // log l'erreur dans la console
+                this.message = "Erreur lors du chargement des projets.";
+            });
+    }
+});
+
+const vm = appli.mount('.projet-wrapper');
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* VUE FETCH   VUE FETCH   VUE FETCH   VUE FETCH      */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
