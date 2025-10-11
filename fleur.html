@@ -16,7 +16,7 @@
     <script src="https://assets.codepen.io/16327/SplitText3.min.js" defer></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="scriptsProjets.js" defer></script>
-
+    <script src="scriptsFleur.js" defer></script>
 </head>
 
 <body>
@@ -36,12 +36,14 @@
     <!-- ========================================          SECTION PROJET          ============================================== -->
     <!-- =======================================https://getcameracrew.com/tools/youtube-embed-code-generator=============================================== -->
     <section class="projet-wrapper" data-index="0">
+        <p v-if="etat === 'loading'">Chargement...</p>
+        <p v-if="etat === 'error'">Erreur lors du chargement des projets.</p>
         <div class="youtube-container">
             <iframe src="https://www.youtube.com/embed/oO8g67QVuCQ?rel=0&rel=0" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
-        <p class="projet-titre">{{ projetActuel?.titre }}</p>
+        <p class="projet-titre" v-if="etat === 'ready'">{{ projetActuel?.titre }}</p>
         <div class="infos-projet">
             <p class="projet-info">Type</p>
             <p class="projet-info-space">•</p>
