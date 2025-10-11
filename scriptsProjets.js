@@ -82,11 +82,20 @@ const appli = Vue.createApp({
     data() {
         return {
             projets: [],  // array vide qui sera rempli avec les projets dans le fetch
+            idProjet: 0, // index du projet à afficher
             message: "Chargement..."  // message par défaut
         };
     },
+    computed: {
+        projetActuel() {
+            return this.projets[this.idProjet]; // récupère l'id du projet dans le array
+        }
+    },
     mounted() {
-        console.log("L'app Vue a été créée et montée au DOM (mounted) !"); // 
+        console.log("L'app Vue a été créée et montée au DOM (mounted) !"); 
+
+        let wrapper = document.querySelector('.projet-wrapper');
+        this.indexProjet = parseInt(wrapper.dataset.index);
 
         fetch('./assets/projects.json')
             .then(response => response.json())
