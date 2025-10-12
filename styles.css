@@ -233,6 +233,11 @@ h1 {
   transition: all 0.3s ease;
 }
 
+.filter.active .filter-circle {
+  background-color: var(--second);
+  transition: all 0.3s ease;
+}
+
 /*=================================================================*/
 
 .projets-container {
