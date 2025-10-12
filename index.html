@@ -57,15 +57,15 @@
             <h1>Projets</h1>
 
             <div class="filters-container">
-                <button class="filter">
+                <button class="filter" @click="btnFiltre('Video')">
                     <div class="filter-circle"></div>
                     <p>Video</p>
                 </button>
-                <button class="filter">
+                <button class="filter" @click="btnFiltre('Web')">
                     <div class="filter-circle"></div>
                     <p>Web</p>
                 </button>
-                <button class="filter">
+                <button class="filter" @click="btnFiltre('Design')">
                     <div class="filter-circle"></div>
                     <p>Design graphique</p>
                 </button>
@@ -76,7 +76,7 @@
             <div class="projets-grid">
 
                 <!-- ==============================  1 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Video'">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetFleur" src="./assets/fleur/thumbnail.webp">
                     </div>
@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- ==============================  2 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Video'">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetBirden" src="./assets/2.jpg">
                     </div>
@@ -99,7 +99,7 @@
                 </div>
 
                 <!-- ==============================  3 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Video'">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetLecorps" src="./assets/2.jpg">
                     </div>
@@ -111,7 +111,7 @@
                 </div>
 
                 <!-- ==============================  4 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Web'">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetMaisonhantee" src="./assets/2.jpg">
                     </div>
@@ -122,7 +122,7 @@
                 </div>
 
                 <!-- ==============================  5 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Design'">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetAutoportrait" src="./assets/2.jpg">
                     </div>
@@ -133,7 +133,7 @@
                 </div>
 
                 <!-- ==============================  6 PROJET  ====================================== -->
-                <div class="projet">
+                <div class="projet" v-show="projetFiltre === 'Design'">
                     <div class="projet-thumbnail-container projetIncisive">
                         <img class="projet-thumbnail" src="./assets/2.jpg">
                     </div>

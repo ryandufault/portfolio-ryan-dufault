@@ -170,3 +170,25 @@ function projetIncisive() {
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*   APP VUE       APP VUE       APP VUE              */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+const appli = Vue.createApp({
+    data() {
+        return {
+          projetFiltre: null, // définit un filtre vide
+        };
+    },
+  methods: {
+    btnFiltre(filtre) {
+      this.projetFiltre = filtre; // pour changer état du filtreProjet selon le boutton cliqué
+    }
+  }
+});
+
+const vm = appli.mount('.projets-wrapper');
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*   APP VUE       APP VUE       APP VUE              */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
