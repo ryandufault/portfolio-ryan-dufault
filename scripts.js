@@ -167,6 +167,55 @@ function projetIncisive() {
   window.location.href = "incisive.html"; // dirige l'utilisateur sur la page du projet
 }
 
+
+//// boutons filtres
+// attends que le dom soit chargé, sinon les id sont "null"
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // récupère les bouttons avec leurs id
+  let btnVideo = document.getElementById('btnVideo');
+  let btnWeb = document.getElementById('btnWeb');
+  let btnDesign = document.getElementById('btnDesign');
+  
+  // fonction pour enlever la classe .active de tous les boutons
+  function resetClass() {
+    btnVideo.classList.remove('active');
+    btnWeb.classList.remove('active');
+    btnDesign.classList.remove('active');
+  }
+  
+  // au clic,
+  btnVideo.addEventListener('click', () => {
+    if (btnVideo.classList.contains('active')) { // si la class .active est présente,
+      btnVideo.classList.remove('active'); // alors enlève .active
+    } else { // sinon, 
+      resetClass(); // réinitialises classes
+      btnVideo.classList.add('active'); // puis ajoute class active
+    }
+  });
+  
+  // au clic,
+  btnWeb.addEventListener('click', () => {
+    if (btnWeb.classList.contains('active')) { // si la class .active est présente,
+      btnWeb.classList.remove('active'); // alors enlève .active
+    } else { // sinon, 
+      resetClass(); // réinitialises classes
+      btnWeb.classList.add('active'); // puis ajoute class active
+    }
+  });
+  
+  // au clic,
+  btnDesign.addEventListener('click', () => {
+    if (btnDesign.classList.contains('active')) { // si la class .active est présente,
+      btnDesign.classList.remove('active'); // alors enlève .active
+    } else { // sinon, 
+      resetClass(); // réinitialises classes
+      btnDesign.classList.add('active'); // puis ajoute class active
+    }
+  });
+  
+});
+
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */

@@ -209,7 +209,7 @@ h1 {
   cursor: pointer;
 }
 
-.filter:active {
+.filter.active {
   background-color: var(--primary);
   color: var(--second);
   transition: all 0.3s ease;
