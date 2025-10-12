@@ -109,6 +109,35 @@ document.querySelector(".logiciels-row").addEventListener("mouseout", function(e
 /* ANIM LOGICIELS    ANIM LOGICIELS    ANIM LOGICIELS */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*   APP VUE       APP VUE       APP VUE              */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+const appli = Vue.createApp({
+    data() {
+        return {
+          projetFiltre: null, // définit un filtre vide
+        };
+    },
+  methods: {
+    btnFiltre(filtre) {
+      // si on clique sur le filtre déjà actif, on le désactive
+      if (this.projetFiltre === filtre) {
+        this.projetFiltre = null;
+      } else {
+        this.projetFiltre = filtre; // sinon, on active le nouveau filtre
+      }
+    }
+  }
+});
+
+const vm = appli.mount('.projets-wrapper');
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*   APP VUE       APP VUE       APP VUE              */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
@@ -116,10 +145,12 @@ document.querySelector(".logiciels-row").addEventListener("mouseout", function(e
 //projetFleur
 document.querySelectorAll(".projetFleur").forEach(function(element) { // sélectionne tout les éléments avec la classe
     element.addEventListener("click", projetFleur); // call la fonction quand clic
+    console.log("hey1")
 });
 
 function projetFleur() {
     window.location.href = "fleur.html"; // dirige l'utilisateur sur la page du projet
+    console.log("hey")
 }
 
 //projetBirden
@@ -218,26 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* BOUTONS/CLICS    BOUTONS/CLICS    BOUTONS/CLICS    */
-/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-/*   APP VUE       APP VUE       APP VUE              */
-/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
-
-const appli = Vue.createApp({
-    data() {
-        return {
-          projetFiltre: null, // définit un filtre vide
-        };
-    },
-  methods: {
-    btnFiltre(filtre) {
-      this.projetFiltre = filtre; // pour changer état du filtreProjet selon le boutton cliqué
-    }
-  }
-});
-
-const vm = appli.mount('.projets-wrapper');
-
-/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
-/*   APP VUE       APP VUE       APP VUE              */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */

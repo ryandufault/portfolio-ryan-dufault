@@ -140,13 +140,13 @@ body::selection {
   grid-template-columns: repeat(12,
       1fr);
   /* <- 12 colonnes de taille répartie également */
-  grid-template-rows: 6.9% 1fr;
+  /*grid-template-rows: 6.9% 1fr;
   /* première row : prend 6.9% (les filtres et le h1) --- deuxième row : restant du 1330px) */
+
   column-gap: var(--clamp24px);
   padding-right: var(--clamp24px);
-  /* marges */
   padding-left: var(--clamp24px);
-  min-height: clamp(1100px,
+  /*min-height: clamp(1100px,
       123vh,
       1119px);
   /* environ 1330px quand écran hauteur = 1080px */
@@ -158,13 +158,12 @@ body::selection {
   grid-column-start: 3;
   grid-column-end: 11;
   grid-row: 1;
-  /*background-color: rgb(91, 183, 153);*/
-  /* débug */
+  display: grid;
+  row-gap: 4.16vw;
+  /* espacement égal entre le h1 et les filtres */
   display: flex;
   flex-direction: column;
   /* aligne les éléments (h1 et filtres) en colonne */
-  justify-content: space-between;
-  /* espacement égal entre le h1 et les filtres */
 }
 
 h1 {
@@ -172,9 +171,11 @@ h1 {
   color: var(--primary);
   text-decoration: none;
   font-weight: 400;
+  grid-row: 1;
 }
 
 .filters-container {
+  grid-row: 2;
   display: flex;
   justify-content: center;
   justify-content: space-between;
