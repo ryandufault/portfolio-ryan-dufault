@@ -145,12 +145,10 @@ const vm = appli.mount('.projets-wrapper');
 //projetFleur
 document.querySelectorAll(".projetFleur").forEach(function(element) { // sélectionne tout les éléments avec la classe
     element.addEventListener("click", projetFleur); // call la fonction quand clic
-    console.log("hey1")
 });
 
 function projetFleur() {
     window.location.href = "fleur.html"; // dirige l'utilisateur sur la page du projet
-    console.log("hey")
 }
 
 //projetBirden
