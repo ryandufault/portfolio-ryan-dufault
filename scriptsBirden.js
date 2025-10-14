@@ -37,3 +37,29 @@ const vm = appli.mount('.projet-wrapper');
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* VUE FETCH   VUE FETCH   VUE FETCH   VUE FETCH      */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/* VUE GALERIE   VUE GALERIE   VUE GALERIe            */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+
+const appli2 = Vue.createApp({
+    data() {
+        return {
+            image: null // image qui sera sélectionnée
+        };
+    },
+    methods: {
+        selectImg(imgSrc) { // méthode lors du clic
+            this.image = imgSrc // récupère la source de l'image cliquée
+        },
+        closeOverlay() {
+            this.image = null; // pour fermer l'overlay
+        }
+    }
+});
+
+const vm2 = appli2.mount('.galerie-wrapper');
+
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* VUE GALERIE   VUE GALERIE   VUE GALERIe            */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
