@@ -39,9 +39,7 @@
     <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
     <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
     <div class="youtube-container">
-      <iframe src="https://www.youtube.com/embed/l939mJIcUs?rel=0&rel=0" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <img src="./assets/incisive/incisivethumbnail.webp">
     </div>
 
     <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
@@ -72,7 +70,7 @@
   <div class="spacing"></div>
   <section class="galerie-wrapper">
     <div class="image1">
-      <img src="./assets/fleur/fleur1.webp" @click="selectImg('./assets/fleur/fleur1.webp')">
+      <img src="./assets/incisive/incisive1.webp" @click="selectImg('./assets/incisive/incisive1.webp')">
       <!-- au clic, call la méthode qui récup source de l'img -->
     </div>
     <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -80,19 +78,15 @@
       <img :src="image"> <!-- affiche image sélectionnée -->
     </div>
     <div class="image2">
-      <img src="./assets/fleur/fleur2.webp" @click="selectImg('./assets/fleur/fleur2.webp')">
+      <img src="./assets/incisive/incisive2.webp" @click="selectImg('./assets/incisive/incisive2.webp')">
     </div>
     <div class="image3456">
-      <img class="image3456-1" src="./assets/fleur/fleur3.webp" @click="selectImg('./assets/fleur/fleur3.webp')">
-      <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
-        poster="./assets/fleur/fleur4.webp" @click="selectImg('./assets/fleur/fleur4.webp')">
-        <source src="./assets/fleur/fleur1.webm" type="video/webm">
-      </video>
-      <video class="video2" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
-        poster="./assets/fleur/fleur5.webp" @click="selectImg('./assets/fleur/fleur5.webp')">
-        <source src="./assets/fleur/fleur2.webm" type="video/webm">
-      </video>
-      <img class="image3456-4" src="./assets/fleur/fleur6.webp" @click="selectImg('./assets/fleur/fleur6.webp')">
+      <img class="image3456-1" src="./assets/incisive/incisive3.webp"
+        @click="selectImg('./assets/incisive/incisive3.webp')">
+      <img class="video1" src="./assets/incisive/incisive4.webp" @click="selectImg('./assets/incisive/incisive4.webp')">
+      <img class="video2" src="./assets/incisive/incisive5.webp" @click="selectImg('./assets/incisive/incisive5.webp')">
+      <img class="image3456-4" src="./assets/incisive/incisive6.webp"
+        @click="selectImg('./assets/incisive/incisive6.webp')">
     </div>
   </section>
   <div class="spacing"></div>
