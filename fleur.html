@@ -74,7 +74,12 @@
     <div class="spacing"></div>
     <section class="galerie-wrapper">
         <div class="image1">
-            <img src="./assets/fleur/fleur1.webp">
+            <img src="./assets/fleur/fleur1.webp" @click="selectImg('./assets/fleur/fleur1.webp')">
+            <!-- au clic, call la méthode qui récup source de l'img -->
+        </div>
+        <div class="overlay" :class="{ active: image }" @click="closeOverlay">
+            <!-- class .active ajoutée si image select (selectImg(src)), sinon overlay display: none-->
+            <img :src="image"> <!-- affiche image sélectionnée -->
         </div>
         <div class="image2">
             <img src="./assets/fleur/fleur2.webp">
