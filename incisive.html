@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Dufault : Incisive</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
   <link rel="stylesheet" href="stylesProjets.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +40,7 @@
     <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
     <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
     <div class="youtube-container">
-      <img src="./assets/incisive/incisivethumbnail.webp">
+      <img src="./assets/incisive/incisivethumbnail.webp" alt="Miniature du projet Incisive">
     </div>
 
     <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
@@ -81,11 +82,13 @@
       <img src="./assets/incisive/incisive2.webp" @click="selectImg('./assets/incisive/incisive2.webp')">
     </div>
     <div class="image3456">
-      <img class="image3456-1" src="./assets/incisive/incisive3.webp"
+      <img class="image3456-1" src="./assets/incisive/incisive3.webp" alt="Image tirée du projet Incisive"
         @click="selectImg('./assets/incisive/incisive3.webp')">
-      <img class="video1" src="./assets/incisive/incisive4.webp" @click="selectImg('./assets/incisive/incisive4.webp')">
-      <img class="video2" src="./assets/incisive/incisive5.webp" @click="selectImg('./assets/incisive/incisive5.webp')">
-      <img class="image3456-4" src="./assets/incisive/incisive6.webp"
+      <img class="video1" src="./assets/incisive/incisive4.webp" @click="selectImg('./assets/incisive/incisive4.webp')"
+        alt="Image tirée du projet Incisive">
+      <img class="video2" src="./assets/incisive/incisive5.webp" @click="selectImg('./assets/incisive/incisive5.webp')"
+        alt="Image tirée du projet Incisive">
+      <img class="image3456-4" src="./assets/incisive/incisive6.webp" alt="Image tirée du projet Incisive"
         @click="selectImg('./assets/incisive/incisive6.webp')">
     </div>
   </section>

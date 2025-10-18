@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Dufault : Maison Hantée</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
   <link rel="stylesheet" href="stylesProjets.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,11 +40,8 @@
     <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
     <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
     <div class="youtube-container">
-      <iframe src="https://www.youtube.com/embed/l939mJIcUs?rel=0&rel=0" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <img src="./assets/maisonhantee/maisonhanteethumbnail.webp" alt="Miniature du projet Maison Hantée">
     </div>
-
     <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
     <!-- le "?" fait en sorte d'afficher quand les données arrivent sinon c'est broken (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) -->
     <div class="infos-projet" v-show="etat === 'loaded'">
@@ -74,26 +72,8 @@
   <div class="spacing"></div>
   <section class="galerie-wrapper">
     <div class="image1">
-      <img src="./assets/fleur/fleur1.webp" />
-    </div>
-    <div class="image2">
-      <img src="./assets/fleur/fleur2.webp" />
-    </div>
-    <div class="image3456">
-      <img class="image3456-1" src="./assets/fleur/fleur3.webp" />
-      <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy">
-        <source src="./assets/fleur/fleur1.webm" type="video/webm" />
-      </video>
-      <video class="video2" autoplay loop muted playsinline aria-hidden="true" loading="lazy">
-        <source src="./assets/fleur/fleur2.webm" type="video/webm" />
-      </video>
-      <img class="image3456-4" src="./assets/fleur/fleur6.webp" />
-    </div>
-  </section>
-  <div class="spacing"></div>
-  <section class="galerie-wrapper">
-    <div class="image1">
-      <img src="./assets/fleur/fleur1.webp" @click="selectImg('./assets/fleur/fleur1.webp')">
+      <img src="./assets/maisonhantee/maisonhantee1.webp" @click="selectImg('./assets/maisonhantee/maisonhantee1.webp')"
+        alt="Image statique du projet Maison Hantée">
       <!-- au clic, call la méthode qui récup source de l'img -->
     </div>
     <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -101,19 +81,24 @@
       <img :src="image"> <!-- affiche image sélectionnée -->
     </div>
     <div class="image2">
-      <img src="./assets/fleur/fleur2.webp" @click="selectImg('./assets/fleur/fleur2.webp')">
+      <img src="./assets/maisonhantee/maisonhantee2.webp" @click="selectImg('./assets/maisonhantee/maisonhantee2.webp')"
+        alt="Image statique du projet Maison Hantée">
     </div>
     <div class="image3456">
-      <img class="image3456-1" src="./assets/fleur/fleur3.webp" @click="selectImg('./assets/fleur/fleur3.webp')">
+      <img class="image3456-1" src="./assets/maisonhantee/maisonhantee3.webp"
+        alt="Image statique du projet Maison Hantée" @click="selectImg('./assets/maisonhantee/maisonhantee3.webp')">
       <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
-        poster="./assets/fleur/fleur4.webp" @click="selectImg('./assets/fleur/fleur4.webp')">
-        <source src="./assets/fleur/fleur1.webm" type="video/webm">
+        poster="./assets/maisonhantee/maisonhantee4.png" @click="selectImg('./assets/maisonhantee/maisonhantee4.png')"
+        alt="Court extrait vidéo du projet Maison Hantée">
+        <source src="./assets/maisonhantee/maisonhantee4.webm" type="video/webm">
       </video>
       <video class="video2" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
-        poster="./assets/fleur/fleur5.webp" @click="selectImg('./assets/fleur/fleur5.webp')">
-        <source src="./assets/fleur/fleur2.webm" type="video/webm">
+        poster="./assets/maisonhantee/maisonhantee5.png" @click="selectImg('./assets/maisonhantee/maisonhantee5.png')"
+        alt="Court extrait vidéo du projet Maison Hantée">
+        <source src="./assets/maisonhantee/maisonhantee5.webm" type="video/webm">
       </video>
-      <img class="image3456-4" src="./assets/fleur/fleur6.webp" @click="selectImg('./assets/fleur/fleur6.webp')">
+      <img class="image3456-4" src="./assets/maisonhantee/maisonhantee6.webp"
+        alt="Image statique du projet Maison Hantée" @click="selectImg('./assets/maisonhantee/maisonhantee6.webp')">
     </div>
   </section>
   <div class="spacing"></div>
