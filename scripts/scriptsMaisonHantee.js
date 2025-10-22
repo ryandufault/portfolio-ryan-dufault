@@ -19,7 +19,7 @@ const appli = Vue.createApp({
         console.log("L'app Vue a été créée et montée au DOM (mounted) !"); 
         let wrapper = document.querySelector('.projet-wrapper'); // sélectionne la section
         this.idProjet = parseInt(wrapper.dataset.index) // récupère l'index (=0) du data set dans le .projet-wrapper et l'applique à idProjet
-        fetch('./assets/projects.json')
+        fetch('../assets/projects.json')
             .then(response => response.json())
             .then(data => {
                 this.projets = data.projets;  // récupère les données json des projets et les mets dans l'array

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Dufault : Autoportrait</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
-  <link rel="stylesheet" href="stylesProjets.css" />
+  <link rel="stylesheet" href="../styles/stylesProjets.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
@@ -16,8 +16,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="scriptsAutoportrait.js" defer></script>
-  <script src="scriptsProjets.js" defer></script>
+  <script src="../scripts/scriptsAutoportrait.js" defer></script>
+  <script src="../scripts/scriptsProjets.js" defer></script>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
     <p v-show="etat === 'loading'" class="fetchEtat">Chargement...</p>
     <p v-show="etat === 'error'" class="fetchEtat">Erreur lors du chargement des projets.</p>
     <div class="youtube-container">
-      <img src="./assets/autoportrait/autoportraitthumbnail.webp" alt="Autoportraits combinés">
+      <img src="../assets/autoportrait/autoportraitthumbnail.webp" alt="Autoportraits combinés">
     </div>
     <p class="projet-titre" v-show="etat === 'loaded'">{{ projetActuel?.titre }}</p>
     <!-- le "?" fait en sorte d'afficher quand les données arrivent sinon c'est broken (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) -->
@@ -70,8 +70,8 @@
   <div class="spacing"></div>
   <section class="galerie-wrapper">
     <div class="image1">
-      <img src="./assets/autoportrait/autoportrait1.webp" alt="Autoportrait numéro 1"
-        @click="selectImg('./assets/autoportrait/autoportrait1.webp')">
+      <img src="../assets/autoportrait/autoportrait1.webp" alt="Autoportrait numéro 1"
+        @click="selectImg('../assets/autoportrait/autoportrait1.webp')">
       <!-- au clic, call la méthode qui récup source de l'img -->
     </div>
     <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -79,18 +79,18 @@
       <img :src="image"> <!-- affiche image sélectionnée -->
     </div>
     <div class="image2">
-      <img src="./assets/autoportrait/autoportrait2.webp" alt="Autoportrait numéro 2"
-        @click="selectImg('./assets/autoportrait/autoportrait2.webp')">
+      <img src="../assets/autoportrait/autoportrait2.webp" alt="Autoportrait numéro 2"
+        @click="selectImg('../assets/autoportrait/autoportrait2.webp')">
     </div>
     <div class="image3456">
-      <img class="image3456-1" src="./assets/autoportrait/autoportrait3.webp" alt="Autoportrait numéro 3"
-        @click="selectImg('./assets/autoportrait/autoportrait3.webp')">
-      <img class="video1" src="./assets/autoportrait/autoportrait4.webp" alt="Autoportrait numéro 4"
-        @click="selectImg('./assets/autoportrait/autoportrait4.webp')">
-      <img class="video2" src="./assets/autoportrait/autoportrait5.webp" alt="Autoportrait numéro 5"
-        @click="selectImg('./assets/autoportrait/autoportrait5.webp')">
-      <img class="image3456-4" src="./assets/autoportrait/autoportrait6.webp" alt="Autoportrait numéro 6"
-        @click="selectImg('./assets/autoportrait/autoportrait6.webp')">
+      <img class="image3456-1" src="../assets/autoportrait/autoportrait3.webp" alt="Autoportrait numéro 3"
+        @click="selectImg('../assets/autoportrait/autoportrait3.webp')">
+      <img class="video1" src="../assets/autoportrait/autoportrait4.webp" alt="Autoportrait numéro 4"
+        @click="selectImg('../assets/autoportrait/autoportrait4.webp')">
+      <img class="video2" src="../assets/autoportrait/autoportrait5.webp" alt="Autoportrait numéro 5"
+        @click="selectImg('../assets/autoportrait/autoportrait5.webp')">
+      <img class="image3456-4" src="../assets/autoportrait/autoportrait6.webp" alt="Autoportrait numéro 6"
+        @click="selectImg('../assets/autoportrait/autoportrait6.webp')">
     </div>
   </section>
   <div class="spacing"></div>

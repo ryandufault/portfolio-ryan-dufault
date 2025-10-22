@@ -10,7 +10,7 @@ gsap.registerPlugin(SplitText);
 document.querySelector(".header-svg").addEventListener("click", accueil); // quand on clique sur le header
 
 function accueil() {
-    window.location.href = "index.html"; // quand on clique sur le header ça ramène à l'accueil
+    window.location.href = "../index.html"; // quand on clique sur le header ça ramène à l'accueil
   }
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */

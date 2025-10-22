@@ -148,7 +148,7 @@ document.querySelectorAll(".projetFleur").forEach(function(element) { // sélect
 });
 
 function projetFleur() {
-    window.location.href = "fleur.html"; // dirige l'utilisateur sur la page du projet
+    window.location.href = "projets/fleur.html"; // dirige l'utilisateur sur la page du projet
 }
 
 //projetBirden
@@ -157,7 +157,7 @@ document.querySelectorAll(".projetBirden").forEach(function(element) { // sélec
 });
 
 function projetBirden() {
-  window.location.href = "birden.html"; // dirige l'utilisateur sur la page du projet
+  window.location.href = "projets/birden.html"; // dirige l'utilisateur sur la page du projet
 }
 
 //projetLecorps
@@ -166,7 +166,7 @@ document.querySelectorAll(".projetLecorps").forEach(function(element) { // séle
 });
 
 function projetLecorps() {
-  window.location.href = "le_corps.html"; // dirige l'utilisateur sur la page du projet
+  window.location.href = "projets/le_corps.html"; // dirige l'utilisateur sur la page du projet
 }
 
 //projetMaisonhantee
@@ -175,7 +175,7 @@ document.querySelectorAll(".projetMaisonhantee").forEach(function(element) { // 
 });
 
 function projetMaisonhantee() {
-  window.location.href = "maison_hantee.html"; // dirige l'utilisateur sur la page du projet
+  window.location.href = "projets/maison_hantee.html"; // dirige l'utilisateur sur la page du projet
 }
 
 //projetAutoportrait
@@ -184,7 +184,7 @@ document.querySelectorAll(".projetAutoportrait").forEach(function(element) { // 
 });
 
 function projetAutoportrait() {
-  window.location.href = "autoportrait.html"; // dirige l'utilisateur sur la page du projet
+  window.location.href = "projets/autoportrait.html"; // dirige l'utilisateur sur la page du projet
 }
 
 //projetIncisive
@@ -193,11 +193,11 @@ document.querySelectorAll(".projetIncisive").forEach(function(element) { // sél
 });
 
 function projetIncisive() {
-  window.location.href = "incisive.html"; // dirige l'utilisateur sur la page du projet
+  window.location.href = "projets/incisive.html"; // dirige l'utilisateur sur la page du projet
 }
 
 
-//// boutons filtres
+/////////////////////////////////////////////////////////////////////////// boutons filtres
 // attends que le dom soit chargé, sinon les id sont "null"
 document.addEventListener('DOMContentLoaded', () => {
   
