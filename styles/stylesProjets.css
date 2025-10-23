@@ -371,7 +371,7 @@ body::selection {
   grid-row-start: 2;
   grid-row-end: 3;
   object-fit: cover;
-
+  cursor: zoom-in;
 }
 
 
@@ -398,7 +398,7 @@ body::selection {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  
+
 }
 
 .overlay source {
@@ -415,6 +415,178 @@ body::selection {
 
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /*    GALERIE      GALERIE      GALERIE      GALERIE      GALERIE      GALERIE              */
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+/*          PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS           */
+/* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
+.processus-container {
+  padding-top: 3.75vw; /* équivalent espace titre projet et yt container*/
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  column-gap: var(--clamp24px);
+  row-gap: var(--clamp24px);
+}
+
+h3 {
+  font-size: clamp(36px, 2.188vw, 58px); /* équivalent description projet */
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 400;
+  justify-self: start;
+}
+
+.etape1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--clamp24px);
+  overflow: hidden;
+  margin: 0;
+  color: var(--primary);
+  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+}
+
+.etape2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--clamp24px);
+  overflow: hidden;
+  margin: 0;
+  color: var(--primary);
+  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+}
+
+.etape3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--clamp24px);
+  overflow: hidden;
+  margin: 0;
+  color: var(--primary);
+  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+}
+
+.etape1 p:first-of-type { /* sélectionne premier texte */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: start;
+  justify-self: start;
+  font-size: clamp(18px, 1.25vw, 28px);
+  padding-bottom: var(--clamp16px);
+
+}
+
+.etape1 p:last-of-type { /* sélectionne deuxième texte */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: var(--clamp16px);
+  padding-bottom: clamp(18px, 0.625vw, 28px);
+  align-self: end;
+}
+
+.etape1 img:first-of-type { /* sélectionne première image */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 0.12vw solid var(--primary);
+  object-fit: scale-down;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+
+.etape1 img:last-of-type { /* sélectionne deuxième image */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border: 0.12vw solid var(--primary);
+  object-fit: scale-down;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape2 p:first-of-type { /* sélectionne premier texte */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-size: clamp(18px, 1.25vw, 28px);
+  padding-bottom: var(--clamp16px);
+  align-self: start;
+  justify-self: start;
+  
+}
+
+.etape2 p:last-of-type { /* sélectionne deuxième texte */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: var(--clamp16px);
+  padding-bottom: clamp(18px, 0.625vw, 28px);
+  align-self: end;
+}
+
+.etape2 img:first-of-type { /* sélectionne première image */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape2 img:last-of-type { /* sélectionne deuxième image */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape3 p:first-of-type { /* sélectionne premier texte */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-size: clamp(18px, 1.25vw, 28px);
+  padding-bottom: var(--clamp16px);
+  align-self: start;
+  justify-self: start;
+}
+
+.etape3 p:last-of-type { /* sélectionne deuxième texte */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: var(--clamp16px);
+  padding-bottom: clamp(18px, 0.625vw, 28px);
+  align-self: end;
+}
+
+.etape3 img:first-of-type { /* sélectionne première image */
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape3 img:last-of-type { /* sélectionne deuxième image */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%; /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+/* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
+/*          PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS           */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*               FOOTER        FOOTER        FOOTER        FOOTER        FOOTER             */
@@ -817,7 +989,8 @@ body::selection {
   .overlay img {
     max-width: 150%;
     max-height: 100%;
-    transform: rotate(-90deg); /* rotate l'img sélectionnée à 90 degré (mieux adapté/intuitif aux écrans mobiles) */
+    transform: rotate(-90deg);
+    /* rotate l'img sélectionnée à 90 degré (mieux adapté/intuitif aux écrans mobiles) */
   }
 }
 
