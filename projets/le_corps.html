@@ -76,7 +76,7 @@
   <section class="galerie-wrapper">
     <div class="image1">
       <img src="../assets/lecorps/lecorps1.webp" @click="selectImg('../assets/lecorps/lecorps1.webp')"
-        alt="Image statique du projet Le Corps">
+        alt="Image statique du projet Le Corps" loading="lazy">
       <!-- au clic, call la méthode qui récup source de l'img -->
     </div>
     <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -85,11 +85,11 @@
     </div>
     <div class="image2">
       <img src="../assets/lecorps/lecorps2.webp" @click="selectImg('../assets/lecorps/lecorps2.webp')"
-        alt="Image statique du projet Le Corps">
+        alt="Image statique du projet Le Corps" loading="lazy">
     </div>
     <div class="image3456">
-      <img class="image3456-1" src="../assets/lecorps/lecorps3.webp" @click="selectImg('../assets/lecorps/lecorps3.webp')"
-        alt="Image statique du projet Le Corps">
+      <img class="image3456-1" src="../assets/lecorps/lecorps3.webp"
+        @click="selectImg('../assets/lecorps/lecorps3.webp')" alt="Image statique du projet Le Corps" loading="lazy">
       <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
         poster="../assets/lecorps/lecorps4.webp" @click="selectImg('../assets/lecorps/lecorps4.webp')"
         alt="Court extrait vidéo du projet Le Corps">
@@ -100,8 +100,8 @@
         alt="Court extrait vidéo du projet Le Corps">
         <source src="../assets/lecorps/lecorps5.webm" type="video/webm">
       </video>
-      <img class="image3456-4" src="../assets/lecorps/lecorps6.webp" @click="selectImg('../assets/lecorps/lecorps6.webp')"
-        alt="Image statique du projet Le Corps">
+      <img class="image3456-4" src="../assets/lecorps/lecorps6.webp"
+        @click="selectImg('../assets/lecorps/lecorps6.webp')" alt="Image statique du projet Le Corps" loading="lazy">
     </div>
   </section>
   <div class="spacing"></div>

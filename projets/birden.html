@@ -78,7 +78,7 @@
     <section class="galerie-wrapper">
         <div class="image1">
             <img src="../assets/birden/birden1.webp" @click="selectImg('../assets/birden/birden1.webp')"
-                alt="Miniature du projet Birden">
+                alt="Miniature du projet Birden" loading="lazy">
             <!-- au clic, call la méthode qui récup source de l'img -->
         </div>
         <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -87,11 +87,11 @@
         </div>
         <div class="image2">
             <img src="../assets/birden/birden2.webp" @click="selectImg('../assets/birden/birden2.webp')"
-                alt="Image statique du projet Birden">
+                alt="Image statique du projet Birden" loading="lazy">
         </div>
         <div class="image3456">
             <img class="image3456-1" src="../assets/birden/birden3.webp" alt="Image statique du projet Birden"
-                @click="selectImg('../assets/birden/birden3.webp')">
+                @click="selectImg('../assets/birden/birden3.webp')" loading="lazy">
             <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
                 poster="../assets/birden/birden4.webp" @click="selectImg('../assets/birden/birden4.webp')"
                 alt="Court extrait vidéo du projet Birden">
@@ -103,7 +103,7 @@
                 <source src="../assets/birden/birden5.webm" type="video/webm">
             </video>
             <img class="image3456-4" src="../assets/birden/birden6.webp" alt="Image statique du projet Birden"
-                @click="selectImg('../assets/birden/birden6.webp')">
+                @click="selectImg('../assets/birden/birden6.webp')" loading="lazy">
         </div>
     </section>
     <div class="spacing"></div>

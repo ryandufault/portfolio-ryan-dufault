@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Ryan Dufault, passionné d'audiovisuel, spécialisé en montage vidéo, effets visuels et traitement du son. À la recherche d'une équipe créative en multimédia.">
+    <meta name="robots" content="index, follow">
     <title>Ryan Dufault</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
     <link rel="stylesheet" href="/styles/styles.css" />
@@ -79,7 +82,8 @@
                 <!-- ==============================  1 PROJET  ====================================== -->
                 <div class="projet" v-show="projetFiltre === 'Video' || projetFiltre === null">
                     <div class="projet-thumbnail-container">
-                        <img class="projet-thumbnail projetFleur" src="./assets/fleur/thumbnail.webp">
+                        <img class="projet-thumbnail projetFleur" src="./assets/fleur/thumbnail.webp"
+                            alt="Miniature du projet Fleur" loading="lazy">
                     </div>
                     <p class="projet-titre projetFleur">•ㅤFleur</p>
                     <p class="projet-type">Typeㅤ•ㅤVidéo</p>
@@ -91,7 +95,8 @@
                 <!-- ==============================  2 PROJET  ====================================== -->
                 <div class="projet" v-show="projetFiltre === 'Video' || projetFiltre === null">
                     <div class="projet-thumbnail-container">
-                        <img class="projet-thumbnail projetBirden" src="./assets/birden/birden1.webp">
+                        <img class="projet-thumbnail projetBirden" src="./assets/birden/birden1.webp"
+                            alt="Miniature du projet Birden" loading="lazy">
                     </div>
                     <p class="projet-titre projetBirden">•ㅤBirden</p>
                     <p class="projet-type">Typeㅤ•ㅤVidéo</p>
@@ -102,7 +107,8 @@
                 <!-- ==============================  3 PROJET  ====================================== -->
                 <div class="projet" v-show="projetFiltre === 'Video' || projetFiltre === null">
                     <div class="projet-thumbnail-container">
-                        <img class="projet-thumbnail projetLecorps" src="./assets/lecorps/lecorps1.webp">
+                        <img class="projet-thumbnail projetLecorps" src="./assets/lecorps/lecorps1.webp"
+                            alt="Miniature du projet Le Corps" loading="lazy">
                     </div>
                     <p class="projet-titre projetLecorps">•ㅤLe Corps</p>
                     <p class="projet-type">Typeㅤ•ㅤVidéo</p>
@@ -115,7 +121,8 @@
                 <div class="projet" v-show="projetFiltre === 'Web' || projetFiltre === null">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetMaisonhantee"
-                            src="./assets/maisonhantee/maisonhanteethumbnail.webp">
+                            src="./assets/maisonhantee/maisonhanteethumbnail.webp"
+                            alt="Miniature du projet Maison Hantée" loading="lazy">
                     </div>
                     <p class="projet-titre projetMaisonhantee">•ㅤMaison Hantée</p>
                     <p class="projet-type">Typeㅤ•ㅤWeb</p>
@@ -127,7 +134,8 @@
                 <div class="projet" v-show="projetFiltre === 'Design' || projetFiltre === null">
                     <div class="projet-thumbnail-container">
                         <img class="projet-thumbnail projetAutoportrait"
-                            src="./assets/autoportrait/autoportraitthumbnail.webp">
+                            src="./assets/autoportrait/autoportraitthumbnail.webp"
+                            alt="Miniature du projet Autoportrait" loading="lazy">
                     </div>
                     <p class="projet-titre projetAutoportrait">•ㅤAutoportrait</p>
                     <p class="projet-type">Typeㅤ•ㅤDesign</p>
@@ -138,7 +146,8 @@
                 <!-- ==============================  6 PROJET  ====================================== -->
                 <div class="projet" v-show="projetFiltre === 'Design' || projetFiltre === null">
                     <div class="projet-thumbnail-container projetIncisive">
-                        <img class="projet-thumbnail" src="./assets/incisive/incisivethumbnail.webp">
+                        <img class="projet-thumbnail" src="./assets/incisive/incisivethumbnail.webp"
+                            alt="Miniature du projet Incisive" loading="lazy">
                     </div>
                     <p class="projet-titre projetIncisive">•ㅤIncisive</p>
                     <p class="projet-type">Typeㅤ•ㅤDesign Graphique</p>
@@ -166,8 +175,8 @@
                 <img src="./assets/logiciels/figma.webp" alt="Figma / Design graphique"
                     title="Figma / Design graphique"> <img src="./assets/logiciels/reaper.webp" alt="Reaper / Audio"
                     title="Reaper / Audio">
-                <img src="./assets/logiciels/fl.webp" alt="FL Studio / Audio" title="FL Studio / Audio"> <img
-                    src="./assets/logiciels/cubase.webp" alt="Cubase / Audio" title="Cubase / Audio">
+                <img src="./assets/logiciels/fl.webp" alt="FL Studio / Audio" title="FL Studio / Audio">
+                <img src="./assets/logiciels/cubase.webp" alt="Cubase / Audio" title="Cubase / Audio">
                 <img src="./assets/logiciels/ps.webp" alt="Adobe Photoshop / Design graphique"
                     title="Adobe Photoshop / Design graphique"> <img src="./assets/logiciels/ae.webp"
                     alt="Adobe After Effects / Vidéo" title="Adobe After Effects / Vidéo">
@@ -196,7 +205,8 @@
             <div class="apropos-grid">
                 <div class="apropos">
                     <div class="apropos-photo-container">
-                        <img class="apropos-photo" src="./assets/apropos.webp">
+                        <img class="apropos-photo" src="./assets/apropos.webp" alt="Photo de Ryan Dufault"
+                            loading="lazy">
                     </div>
                     <p class="coordonnees">Basé à St-Eustache, QC<br>
                         438-379-0330<br>
@@ -204,8 +214,10 @@
                     <p class="coordonnees2">Au plaisir de travailler avec vous :)</p>
                     <p class="description">Allo!<br>Moi c'est Ryan, finissant en Techniques d'intégration
                         multimédia au Collège Montmorency. Je suis passionné par l'audiovisuel, particulièrement
-                        au montage vidéo, aux effets visuels et au traitement du son. Je cherche présentement à me joindre à une équipe créative
-                        dans le domaine du multimédia.</p>
+                        le montage vidéo, les effets visuels et le traitement du son. Je cherche présentement à me
+                        joindre à une équipe créative
+                        dans le domaine du multimédia.<br><br>Je souhaite occuper un poste de monteur vidéo dans le
+                        secteur audiovisuel où je pourrai valoriser mon expertise en postproduction d'image et son.</p>
                     <div class="apropos-svg-container">
                         <svg viewBox="0 0 444 154" fill="none" xmlns="http://www.w3.org/2000/svg" class="apropos-svg">
                             <path

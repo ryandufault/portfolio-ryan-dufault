@@ -72,8 +72,9 @@
   <div class="spacing"></div>
   <section class="galerie-wrapper">
     <div class="image1">
-      <img src="../assets/maisonhantee/maisonhantee1.webp" @click="selectImg('../assets/maisonhantee/maisonhantee1.webp')"
-        alt="Image statique du projet Maison Hantée">
+      <img src="../assets/maisonhantee/maisonhantee1.webp"
+        @click="selectImg('../assets/maisonhantee/maisonhantee1.webp')" alt="Image statique du projet Maison Hantée"
+        loading="lazy">
       <!-- au clic, call la méthode qui récup source de l'img -->
     </div>
     <div class="overlay" :class="{ active: image }" @click="closeOverlay">
@@ -81,12 +82,14 @@
       <img :src="image"> <!-- affiche image sélectionnée -->
     </div>
     <div class="image2">
-      <img src="../assets/maisonhantee/maisonhantee2.webp" @click="selectImg('../assets/maisonhantee/maisonhantee2.webp')"
-        alt="Image statique du projet Maison Hantée">
+      <img src="../assets/maisonhantee/maisonhantee2.webp"
+        @click="selectImg('../assets/maisonhantee/maisonhantee2.webp')" alt="Image statique du projet Maison Hantée"
+        loading="lazy">
     </div>
     <div class="image3456">
       <img class="image3456-1" src="../assets/maisonhantee/maisonhantee3.webp"
-        alt="Image statique du projet Maison Hantée" @click="selectImg('../assets/maisonhantee/maisonhantee3.webp')">
+        alt="Image statique du projet Maison Hantée" @click="selectImg('../assets/maisonhantee/maisonhantee3.webp')"
+        loading="lazy">
       <video class="video1" autoplay loop muted playsinline aria-hidden="true" loading="lazy"
         poster="../assets/maisonhantee/maisonhantee4.png" @click="selectImg('../assets/maisonhantee/maisonhantee4.png')"
         alt="Court extrait vidéo du projet Maison Hantée">
@@ -98,7 +101,8 @@
         <source src="../assets/maisonhantee/maisonhantee5.webm" type="video/webm">
       </video>
       <img class="image3456-4" src="../assets/maisonhantee/maisonhantee6.webp"
-        alt="Image statique du projet Maison Hantée" @click="selectImg('../assets/maisonhantee/maisonhantee6.webp')">
+        alt="Image statique du projet Maison Hantée" @click="selectImg('../assets/maisonhantee/maisonhantee6.webp')"
+        loading="lazy">
     </div>
   </section>
   <div class="spacing"></div>
