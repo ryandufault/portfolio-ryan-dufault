@@ -389,7 +389,7 @@ body::selection {
   cursor: zoom-out;
   backdrop-filter: blur(2px);
   /* flou de fond */
-  background-image: url("../assets/noise.svg");
+  background-image: url("/portfolio-ryan-dufault/assets/noise.svg");
   /* effet de grain de fond */
 }
 
