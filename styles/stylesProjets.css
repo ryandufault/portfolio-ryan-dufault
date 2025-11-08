@@ -43,7 +43,7 @@ body::selection {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 .header {
-  position: sticky;
+  position: sticky !important;
   top: 0;
   padding-top: var(--clamp24px);
   /* ≈24px sur un viewport de 1080px */
@@ -420,7 +420,8 @@ body::selection {
 /*          PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS           */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 .processus-container {
-  padding-top: 3.75vw; /* équivalent espace titre projet et yt container*/
+  padding-top: 3.75vw;
+  /* équivalent espace titre projet et yt container*/
   grid-column-start: 1;
   grid-column-end: -1;
   display: grid;
@@ -429,7 +430,8 @@ body::selection {
 }
 
 h3 {
-  font-size: clamp(36px, 2.188vw, 58px); /* équivalent description projet */
+  font-size: clamp(36px, 2.188vw, 58px);
+  /* équivalent description projet */
   color: var(--primary);
   text-decoration: none;
   font-weight: 400;
@@ -443,7 +445,8 @@ h3 {
   overflow: hidden;
   margin: 0;
   color: var(--primary);
-  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+  padding-bottom: var(--clamp16px);
+  /* en plus du rowgap de 24px */
 }
 
 .etape2 {
@@ -453,7 +456,8 @@ h3 {
   overflow: hidden;
   margin: 0;
   color: var(--primary);
-  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+  padding-bottom: var(--clamp16px);
+  /* en plus du rowgap de 24px */
 }
 
 .etape3 {
@@ -463,10 +467,12 @@ h3 {
   overflow: hidden;
   margin: 0;
   color: var(--primary);
-  padding-bottom: var(--clamp16px); /* en plus du rowgap de 24px */
+  padding-bottom: var(--clamp16px);
+  /* en plus du rowgap de 24px */
 }
 
-.etape1 p:first-of-type { /* sélectionne premier texte */
+.etape1 p:first-of-type {
+  /* sélectionne premier texte */
   grid-column-start: 1;
   grid-column-end: 2;
   align-self: start;
@@ -476,7 +482,8 @@ h3 {
 
 }
 
-.etape1 p:last-of-type { /* sélectionne deuxième texte */
+.etape1 p:last-of-type {
+  /* sélectionne deuxième texte */
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: var(--clamp16px);
@@ -484,30 +491,35 @@ h3 {
   align-self: end;
 }
 
-.etape1 img:first-of-type { /* sélectionne première image */
+.etape1 img:first-of-type {
+  /* sélectionne première image */
   grid-column-start: 1;
   grid-column-end: 2;
   border: 0.12vw solid var(--primary);
   object-fit: scale-down;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
 
 
-.etape1 img:last-of-type { /* sélectionne deuxième image */
+.etape1 img:last-of-type {
+  /* sélectionne deuxième image */
   grid-column-start: 2;
   grid-column-end: 3;
   border: 0.12vw solid var(--primary);
   object-fit: scale-down;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
 
-.etape2 p:first-of-type { /* sélectionne premier texte */
+.etape2 p:first-of-type {
+  /* sélectionne premier texte */
   grid-column-start: 1;
   grid-column-end: 2;
   grid-column-start: 1;
@@ -516,10 +528,11 @@ h3 {
   padding-bottom: var(--clamp16px);
   align-self: start;
   justify-self: start;
-  
+
 }
 
-.etape2 p:last-of-type { /* sélectionne deuxième texte */
+.etape2 p:last-of-type {
+  /* sélectionne deuxième texte */
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: var(--clamp16px);
@@ -527,29 +540,34 @@ h3 {
   align-self: end;
 }
 
-.etape2 img:first-of-type { /* sélectionne première image */
+.etape2 img:first-of-type {
+  /* sélectionne première image */
   grid-column-start: 1;
   grid-column-end: 2;
   border: 0.12vw solid var(--primary);
   object-fit: cover;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
 
-.etape2 img:last-of-type { /* sélectionne deuxième image */
+.etape2 img:last-of-type {
+  /* sélectionne deuxième image */
   grid-column-start: 2;
   grid-column-end: 3;
   border: 0.12vw solid var(--primary);
   object-fit: cover;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
 
-.etape3 p:first-of-type { /* sélectionne premier texte */
+.etape3 p:first-of-type {
+  /* sélectionne premier texte */
   grid-column-start: 1;
   grid-column-end: 2;
   font-size: clamp(18px, 1.25vw, 28px);
@@ -558,7 +576,8 @@ h3 {
   justify-self: start;
 }
 
-.etape3 p:last-of-type { /* sélectionne deuxième texte */
+.etape3 p:last-of-type {
+  /* sélectionne deuxième texte */
   grid-column-start: 1;
   grid-column-end: 3;
   font-size: var(--clamp16px);
@@ -566,25 +585,30 @@ h3 {
   align-self: end;
 }
 
-.etape3 img:first-of-type { /* sélectionne première image */
+.etape3 img:first-of-type {
+  /* sélectionne première image */
   border: 0.12vw solid var(--primary);
   object-fit: cover;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
 
-.etape3 img:last-of-type { /* sélectionne deuxième image */
+.etape3 img:last-of-type {
+  /* sélectionne deuxième image */
   grid-column-start: 2;
   grid-column-end: 3;
   border: 0.12vw solid var(--primary);
   object-fit: cover;
   cursor: zoom-in;
-  max-width: 100%; /* empêche de dépasser le container */
+  max-width: 100%;
+  /* empêche de dépasser le container */
   aspect-ratio: 16/9;
   object-fit: cover;
 }
+
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
 /*          PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS      PROCESSUS           */
 /* ^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^= */
