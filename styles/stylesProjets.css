@@ -24,6 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url("../assets/noise.svg");
 }
 
 body {
@@ -38,12 +39,19 @@ body::selection {
   color: var(--second);
 }
 
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: var(--primary);
+}
+
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 /*    HEADER      HEADER      HEADER      HEADER      HEADER      HEADER      HEADER        */
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 .header {
-  position: sticky !important;
+  position: sticky;
   top: 0;
   padding-top: var(--clamp24px);
   /* ≈24px sur un viewport de 1080px */
@@ -329,7 +337,7 @@ body::selection {
   width: 100%;
   /*height: 500px;*/
   /* alternative si aspect ratio est capricieux */
-  /*aspect-ratio: 16 /9;*/
+  aspect-ratio: 16 /9;
   object-fit: cover;
   cursor: zoom-in;
 }
@@ -389,7 +397,7 @@ body::selection {
   cursor: zoom-out;
   backdrop-filter: blur(2px);
   /* flou de fond */
-  background-image: url("/portfolio-ryan-dufault/assets/noise.svg");
+  background-image: url("../assets/noise.svg");
   /* effet de grain de fond */
 }
 
@@ -463,6 +471,18 @@ h3 {
 .etape3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: var(--clamp24px);
+  overflow: hidden;
+  margin: 0;
+  color: var(--primary);
+  padding-bottom: var(--clamp16px);
+  /* en plus du rowgap de 24px */
+}
+
+.etape4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
   column-gap: var(--clamp24px);
   overflow: hidden;
   margin: 0;
@@ -553,7 +573,7 @@ h3 {
   object-fit: cover;
 }
 
-.etape2 img:last-of-type {
+.etape2 video:first-of-type {
   /* sélectionne deuxième image */
   grid-column-start: 2;
   grid-column-end: 3;
@@ -600,6 +620,58 @@ h3 {
   /* sélectionne deuxième image */
   grid-column-start: 2;
   grid-column-end: 3;
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%;
+  /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape4 p:first-of-type {
+  /* sélectionne premier texte */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 1;
+  font-size: clamp(18px, 1.25vw, 28px);
+  padding-bottom: var(--clamp16px);
+  align-self: start;
+  justify-self: start;
+
+}
+
+.etape4 p:last-of-type {
+  /* sélectionne deuxième texte */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+  font-size: var(--clamp16px);
+  padding-bottom: clamp(18px, 0.625vw, 28px);
+  align-self: end;
+}
+
+.etape4 img:first-of-type {
+  /* sélectionne première image */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 3;
+  border: 0.12vw solid var(--primary);
+  object-fit: cover;
+  cursor: zoom-in;
+  max-width: 100%;
+  /* empêche de dépasser le container */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.etape4 video:first-of-type {
+  /* sélectionne deuxième image */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 3;
   border: 0.12vw solid var(--primary);
   object-fit: cover;
   cursor: zoom-in;

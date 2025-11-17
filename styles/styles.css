@@ -17,6 +17,7 @@
       0.833vw,
       32px);
   /* ≈16px sur un viewport de 1920x1080px */
+  background-image: url("../assets/noise.svg");
 }
 
 * {
@@ -41,7 +42,7 @@ body::selection {
 /* v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v= */
 
 .header {
-  position: sticky !important;
+  position: sticky;
   top: 0;
   padding-top: var(--clamp24px);
   /* ≈24px sur un viewport de 1080px */
